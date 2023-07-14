@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+   
+   <title>projects</title>
+   <style>
+      body {
+         font-family: 'Comfortaa', cursive;
+         text-align: center;
+         padding: 40px;
+         background-color: #000000;
+         color: #ffffff;
+      }
+
+      #container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+      }
+
+      .nameMain {
+         font-size: 32px;
+         margin-bottom: 10px;
+      }
+
+      .nameNeksio {
+         background-image: none;
+      }
+
+      .gap {
+         margin-top: 20px;
+      }
+
+      .panel {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 200px;
+         height: 100px;
+         margin-bottom: 20px;
+         background-color: rgba(0, 0, 0, 0.2);
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+
+      .panel:hover {
+         background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .panel p {
+         margin: 5px 0;
+         font-style: italic;
+      }
+
+      .panel i {
+         font-size: 24px;
+         margin-right: 5px;
+      }
+
+      .panel:first-child {
+         margin-top: 20px;
+      }
+
+      .floating-button-container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 10px; /* Added margin to create space */
+      }
+
+      .floating-button {
+         width: 200px;
+         height: 60px;
+         background-color: #fffa00;
+         border-radius: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+
+      .floating-button:hover {
+         background-color: #ffec6f;
+      }
+
+      .floating-button.clicked {
+         background-color: #ffffb3;
+      }
+
+      .floating-button a {
+         color: #000000;
+         text-decoration: none;
+         font-weight: bold;
+         font-size: 14px;
+      }
+
+      .back-button {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffffff;
+         color: #000000;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+         background-color: #ffffcc;
+      }
+
+      .info-button {
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         background-color: #000000;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         margin-left: 10px;
+      }
+
+      .info-button:hover {
+         background-color: #6e07cd;
+      }
+
+      .info-button i {
+         color: #ffffff;
+         font-size: 18px;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <button class="back-button" onclick="this.classList.add('clicked'); window.location.href='https://mickoissicko.github.io';">
+         <i class="fas fa-arrow-left"></i> Back
+      </button>
+      <div class="center">
+         <p class="nameMain">My Projects</p>
+         <p class="smallerMain">As of now, I am currently only developing a pingspoofer. It is expected to be released soon.</p>
+         <div class="floating-button-container">
+            <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/pingspoofer';">
+               <a href="https://github.com/mickoissicko/pingspoofer">AIN Pingspoofer</a>
+               <div class="info-button" onclick="redirectToInfoPage(event)">
+                  <i class="fas fa-info"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      function redirectToInfoPage(event) {
+         event.stopPropagation(); // Stop click event propagation
+         window.location.href = "https://mickoissicko.github.io/project/pingspoofer"; // Replace with your desired info page URL
+      }
+   </script>
+</body>
+</html>
