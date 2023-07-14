@@ -153,12 +153,19 @@
          <div class="floating-button-container">
             <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/pingspoofer';">
                <a href="https://github.com/mickoissicko/pingspoofer">AIN Pingspoofer</a>
-               <div class="info-button" onclick="event.stopPropagation(); window.location.href='https://example.com/info';">
+               <div class="info-button" onclick="redirectToInfoPage(event)">
                   <i class="fas fa-info"></i>
                </div>
             </div>
          </div>
       </div>
    </div>
+
+   <script>
+      function redirectToInfoPage(event) {
+         event.stopPropagation(); // Stop click event propagation
+         window.location.href = "https://mickoissicko.github.io/project/pingspoofer"; // Replace with your desired info page URL
+      }
+   </script>
 </body>
 </html>
