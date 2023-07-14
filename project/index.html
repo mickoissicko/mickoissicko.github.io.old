@@ -118,6 +118,28 @@
       .back-button:hover {
          background-color: #ffec6f;
       }
+
+      .info-button {
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         background-color: #000000;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         margin-left: 10px;
+      }
+
+      .info-button:hover {
+         background-color: #ffffcc;
+      }
+
+      .info-button i {
+         color: #ffffff;
+         font-size: 18px;
+      }
    </style>
 </head>
 <body>
@@ -131,6 +153,9 @@
          <div class="floating-button-container">
             <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/pingspoofer';">
                <a href="https://github.com/mickoissicko/pingspoofer">AIN Pingspoofer</a>
+               <div class="info-button" onclick="event.stopPropagation(); window.location.href='https://example.com/info';">
+                  <i class="fas fa-info"></i>
+               </div>
             </div>
          </div>
       </div>
