@@ -107,7 +107,7 @@
          position: absolute;
          top: 20px;
          left: 20px;
-         background-color: #ffffff;
+         background-color: #fffa00;
          color: #000000;
          padding: 10px 20px;
          border: none;
@@ -116,12 +116,15 @@
       }
 
       .back-button:hover {
-         background-color: #ffffcc;
+         background-color: #ffec6f;
       }
    </style>
 </head>
 <body>
    <div id="container">
+      <button class="back-button" onclick="window.history.back();">
+         <i class="fas fa-arrow-left"></i> Back
+      </button>
       <div class="center">
          <p class="nameMain">My Projects</p>
          <p class="smallerMain">As of now, I am currently only developing a pingspoofer. It is expected to be released soon.</p>
