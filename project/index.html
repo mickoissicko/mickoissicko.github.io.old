@@ -102,13 +102,30 @@
          font-weight: bold;
          font-size: 14px;
       }
+
+      .back-button {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffffff;
+         color: #000000;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+         background-color: #ffffcc;
+      }
    </style>
 </head>
 <body>
    <div id="container">
-      <div class="center">
-               <button class="back-button" onclick="window.history.back();">
+      <button class="back-button" onclick="window.history.back();">
          <i class="fas fa-arrow-left"></i> Back
+      </button>
+      <div class="center">
          <p class="nameMain">My Projects</p>
          <p class="smallerMain">As of now, I am currently only developing a pingspoofer. It is expected to be released soon.</p>
          <div class="floating-button-container">
