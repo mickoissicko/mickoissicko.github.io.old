@@ -13,7 +13,8 @@
       body {
          font-family: 'Comfortaa', cursive;
          text-align: center;
-         padding: 40px;
+         padding: 0; /* Removed the padding to fill the whole viewport */
+         margin: 0; /* Removed the margin to fill the whole viewport */
          background-color: #000000;
          color: #ffffff;
       }
@@ -23,7 +24,7 @@
          flex-direction: column;
          align-items: center;
          justify-content: center;
-         height: 100vh;
+         min-height: 100vh; /* Set min-height instead of height to fill the whole viewport */
       }
 
       .nameMain {
