@@ -4,7 +4,6 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
    
    <title>mick's space</title>
@@ -18,22 +17,22 @@
          color: #ffffff;
       }
 
-      #container {
+      .container {
          display: flex;
          flex-direction: column;
          align-items: center;
          justify-content: center;
          height: 100vh;
+         padding: 20px;
       }
 
-      .nameMain {
+      .title {
          font-size: 32px;
-         margin-bottom: 10px;
+         margin-bottom: 20px;
       }
 
       .information-text {
          max-width: 600px;
-         margin: 20px auto;
          font-size: 18px;
          line-height: 1.6;
       }
@@ -46,7 +45,7 @@
          display: flex;
          align-items: center;
          justify-content: center;
-         margin-bottom: 10px;
+         margin-top: 20px;
       }
 
       .floating-button {
@@ -78,24 +77,18 @@
    </style>
 </head>
 <body>
-   <div id="container">
-      <div class="center">
-         <p class="nameMain">What is a Pingspoofer?</p>
-         <div class="information-text">
-            <p>Pingspoofing is a technique used in online gaming, where a user intentionally introduces artificial delay to their network interface, causing their in-game ping to appear higher than it actually is. The "ping" refers to the time it takes for data packets to travel from the user's device to the game server and back.</p>
+   <div class="container">
+      <div class="title">What is a Pingspoofer?</div>
+      <div class="information-text">
+         <p>Pingspoofing is used in online gaming where a user intentionally introduces artificial delay to their network interface, causing their in-game ping to appear higher than it actually is. The term "ping" refers to the time it takes for data packets to travel from the user's device to the game server and back again. By manipulating their ping, a Pingspoofer can create the illusion of teleporting or lagging on the screens of other players in the game.</p>
 
-            <p>By manipulating their ping, a Pingspoofer creates the illusion of teleporting or lagging on the screens of other players in the game. This can be particularly frustrating for opponents trying to target or hit the Pingspoofer, as their movements may seem erratic or unpredictable.</p>
+         <p>A network interface serves as the bridge between a computer or device and a network. It is the network adapter you use to connect to your router.</p>
 
-            <p>A network interface serves as the bridge between a computer or device and a network. It is the network adapter you use to connect to your router and facilitates communication and data exchange between your device and the network.</p>
-
-            <p>The primary motive behind Pingspoofing is gaining a competitive advantage in online multiplayer games such as Minecraft, CS:GO, and Valorant. Pingspoofers' seemingly unpredictable movements due to the artificial delay make it difficult for opponents to land shots accurately.</p>
-
-            <p>It's important to note that Pingspoofing is considered unethical and against the terms of service in most online gaming communities. Fair play and respect for others are essential for a positive and enjoyable gaming experience for everyone.</p>
-         </div>
-         <div class="floating-button-container">
-            <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://mickoissicko.github.io/';">
-               <a href="https://mickoissicko.github.io/">Take me back</a>
-            </div>
+         <p>The primary motive behind Pingspoofing is gaining a competitive advantage in online multiplayer games, such as Minecraft, CS:GO, and Valorant; Pingspoofers’ movements look unpredictable as they usually drop a few packets which causes them to teleport, and makes the opponent miss the shot, or in Minecraft, it delays hit registration and knockback, causing you to take very little knockback and get hits otherwise almost impossible. When knockback delay finally wears off, it is already too late and you are once again in a safe spot to begin the fight with your opponent in Minecraft again.</p>
+      </div>
+      <div class="floating-button-container">
+         <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://mickoissicko.github.io/';">
+            <a href="https://mickoissicko.github.io/">Take me back</a>
          </div>
       </div>
    </div>
