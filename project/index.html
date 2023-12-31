@@ -149,7 +149,6 @@
       </button>
       <div class="center">
          <p class="nameMain">My Projects</p>
-         <p class="smallerMain">As of now, I am currently only developing a pingspoofer. It is expected to be released soon.</p>
          <div class="floating-button-container">
             <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/pingspoofer';">
                <a href="https://github.com/mickoissicko/pingspoofer">AIN Pingspoofer</a>
@@ -157,15 +156,25 @@
                   <i class="fas fa-info"></i>
                </div>
             </div>
+            <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/ussr';">
+               <a href="https://github.com/mickoissicko/ussr">USSR</a>
+               <div class="info-button" onclick="redirectToInfoPage2(event)">
+                  <i class="fas fa-info"></i>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 
+
    <script>
       function redirectToInfoPage(event) {
-         event.stopPropagation(); // Stop click event propagation
-         window.location.href = "https://mickoissicko.github.io/project/pingspoofer"; // Replace with your desired info page URL
+         event.stopPropagation();
+         window.location.href = "https://mickoissicko.github.io/project/pingspoofer";
       }
+      function redirectToInfoPage2(event) {
+         event.stopPropagation();
+         window.location.href = "https://mickoissicko.github.io/project/ussr";
    </script>
 </body>
 </html>
