@@ -140,14 +140,31 @@
          color: #ffffff;
          font-size: 18px;
       }
+
+      .back-button {
+   position: absolute;
+   top: 20px;
+   right: 20px; /* Adjust the right value to position the button */
+   background-color: #fffa00; /* Yellow color */
+   color: #000000;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+   background-color: #ffffcc; /* White color on hover */
+}
    </style>
 </head>
 <body>
    <div id="container">
       <div class="center">
-         <p class="nameMain">Hiya~ I'm Mick</p>
-         <p class="smallerMain">I like coding stuff! You can find more information down below.</p>
+         <p class="nameMain">Projects</p>
+         <p class="smallerMain">These are my current projects</p>
          <div class="floating-button-container">
+            <button class="back-button" onclick="history.back()">Back</button>
             <div class="floating-button" onclick="this.classList.add('clicked'); window.location.href='https://github.com/mickoissicko/pingspoofer';">
                <a href="https://github.com/mickoissicko/pingspoofer">AIN Pingspoofer</a>
             </div>
