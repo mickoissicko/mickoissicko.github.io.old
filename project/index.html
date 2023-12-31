@@ -103,22 +103,6 @@
          font-size: 14px;
       }
 
-      .back-button {
-         position: absolute;
-         top: 20px;
-         left: 20px;
-         background-color: #ffffff;
-         color: #000000;
-         padding: 10px 20px;
-         border: none;
-         cursor: pointer;
-         transition: background-color 0.3s ease;
-      }
-
-      .back-button:hover {
-         background-color: #ffffcc;
-      }
-
       .info-button {
          width: 30px;
          height: 30px;
@@ -142,24 +126,27 @@
       }
 
       .back-button {
-   position: absolute;
-   top: 20px;
-   right: 20px; /* Adjust the right value to position the button */
-   background-color: #fffa00; /* Yellow color */
-   color: #000000;
-   padding: 10px 20px;
-   border: none;
-   cursor: pointer;
-   transition: background-color 0.3s ease;
-}
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffffff;
+         color: #000000;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
 
-.back-button:hover {
-   background-color: #ffffcc; /* White color on hover */
-}
+      .back-button:hover {
+         background-color: #ffffcc;
+      }
    </style>
 </head>
 <body>
    <div id="container">
+            <button class="back-button" onclick="window.history.back();">
+         <i class="fas fa-arrow-left"></i> Back
+      </button>
       <div class="center">
          <p class="nameMain">Projects</p>
          <p class="smallerMain">These are my current projects</p>
