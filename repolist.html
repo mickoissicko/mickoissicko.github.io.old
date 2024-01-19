@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+   
+   <title>Repositories</title>
+   <style>
+      body {
+         font-family: 'Comfortaa', cursive;
+         text-align: center;
+         padding: 40px;
+         background-color: #0d0d0d;
+         color: #ffffff;
+         margin: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh
+      }
+      
+      .repolist-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+      }
+
+      .repo-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 200px;
+         height: 100px;
+         background-color: rgba(0, 0, 0, 0.4);
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+         margin: 10px;
+      }
+
+      .repo-box:hover {
+         background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .repo-icon {
+         font-size: 24px;
+         margin-bottom: 5px;
+      }
+
+      .repo-text {
+         font-size: 18px;
+      }
+
+      .github-link {
+         color: #ffffff;
+         text-decoration: none;
+      }
+
+      .back-button {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffcc6f;
+         color: #0d0d0d;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+      }
+
+      .back-button:hover {
+         background-color: #ffa733;
+      }
+   </style>
+</head>
+<body>
+   <button class="back-button" onclick="window.history.back();">
+      Back
+   </button>
+   <div class="repolist-container">
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/ussr';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">USSR</span>
+      </div>
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/blink';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Blink</span>
+      </div>
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/mickoissicko';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">About me</span>
+      </div>
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/website';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">My website</span>
+      </div>
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/mickoissicko.github.io';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Github website</span>
+      </div>
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/snake';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Snake game</span>
+      </div>
+   </div>
+</body>
+</html>
