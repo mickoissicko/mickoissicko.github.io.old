@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+  <title>Today's Highlights</title>
+  <style>
+    body {
+      overflow: hidden;
+      font-family: 'Comfortaa', cursive;
+      text-align: center;
+      padding: 40px;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #ffcc6f;
+      color: #0d0d0d;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 15px;
+    }
+
+    .back-button:hover {
+      background-color: #ffa733;
+    }
+
+    .center {
+      position: middle;
+      margin-left: 250px;
+      margin-right: 250px;
+      font-size: larger;
+    }
+
+    .lol {
+      position: absolute;
+      margin-top: -650px;
+    }
+
+    .wp-site-blocks {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      padding: 20px;
+      border-top: 1px solid #fff;
+      text-align: justify;
+    }
+
+    .wp-block-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .wp-block-site-title a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .wp-block-post-content {
+      text-align: justify;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .blog-box {
+    max-width: 2000px;
+    margin: 20px;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    overflow-y: auto;
+    
+    }
+
+    .center {
+        font-size: 17.542px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button class="back-button" onclick="back()">
+    Back
+  </button>
+  <div class="lol">
+    <h1>Today's Highlights</h1>
+    <p>Date: 20th January, 2024</p>
+  </div>
+  <div class="blog-box center">
+    <p>I just updated two projects -- the USSR & finished a one I created today -- the NGS.</p>
+    <p>It was fun to code the Ngrok Senpai; at least now I won't have to go back to my Tmux session, copy the Ngrok URL, and paste it in Discord -- the NGS will do it automatically for me.</p>
+    <p>I do not think this only benefits me, though -- many other people want something like this, so I am hoping this project could get some attention.</p>
+    <p>I am thinking about making a YouTube tutorial for both of those, and maybe a Minecraft home-lab server tutorial -- a HardwareHaven-esque video.</p>
+    <p>I also just got Git set up, so managing everything will be much easier.</p>
+</div>
+  <div class="wp-site-blocks">
+    <header class="wp-block-template-part">
+    </header>
+    <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-6 wp-block-group-is-layout-constrained" style="border-top-style:solid;border-top-width:1px;margin-top:0px;margin-bottom:0px">
+    </div>
+    <main class="wp-block-group alignwide is-layout-flow wp-block-group-is-layout-flow">
+    </main>
+  </div>
+  <script>
+    function back() {
+      window.location.href = '../index.html';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            text-align: center;
+            padding: 40px;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    -webkit-background-clip: text; /* Safari 3 and Chrome */
+    background-clip: text; /* Standard property */
+    color: transparent;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    -webkit-background-clip: text; /* Safari 3 and Chrome */
+    background-clip: text; /* Standard property */
+    color: transparent;
+}
+
+        #blogs-heading {
+            color: #ffec6f; 
+        }
+
+        .todays-highlights {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffec6f;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .smallerMain {
+            color: #b3b3b3;
+        }
+
+        .floating-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .floating-button {
+            width: 200px;
+            height: 60px;
+            background-color: #ffec6f;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background-color: #ffa733;
+        }
+
+        .floating-button a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+    </style>
+
+    <title>mick's space - Home</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Blogs</h1>
+        <div class="todays-highlights" onclick="redirectHighlights()">20/1/24 - Today's Highlights</div>
+    </div>
+
+    <script>
+        function redirectHighlights() {
+            window.location.href = "blog/todayshighlights.htm";
+        }
+    </script>
+</body>
+
+</html>
