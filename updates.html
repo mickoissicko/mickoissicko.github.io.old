@@ -56,63 +56,33 @@ h2 {
             text-decoration: underline;
         }
 
-        .smallerMain {
-            color: #b3b3b3;
-        }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #ffcc6f;
+      color: #0d0d0d;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 15px;
+    }
 
-        .floating-button-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    .back-button:hover {
+      background-color: #ffa733;
+      background-color: #ffa733;
+    }  
 
-        .floating-button {
-            width: 200px;
-            height: 60px;
-            background-color: #ffec6f;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .floating-button:hover {
-            background-color: #ffa733;
-        }
-
-        .floating-button a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: #ffcc6f;
-            color: #0d0d0d;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border-radius: 15px;
-        }
-
-        .back-button:hover {
-            background-color: #ffa733;
-        }
     </style>
 
-    <title>mick's space - Home</title>
+    <title>mick's blogs</title>
 </head>
 
 <body>
+    <button class="back-button" onclick="back()">
+        Back
+      </button>
     <div id="container">
         <h1>Blogs</h1>
         <div class="todays-highlights" onclick="redirectHighlights()">20/1/24 - Today's Highlights</div>
@@ -122,6 +92,10 @@ h2 {
         function redirectHighlights() {
             window.location.href = "blog/todayshighlights.htm";
         }
+
+        function back() {
+      window.location.href = 'index.html';
+    }
     </script>
 </body>
 
