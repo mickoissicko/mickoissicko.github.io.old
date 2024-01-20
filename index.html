@@ -15,91 +15,127 @@
 
   <title>mick's space</title>
   <style>
-      body {
-         font-family: 'Comfortaa', cursive;
-         text-align: center;
-         padding: 40px;
-         background-color: #0d0d0d;
-         color: #ffffff;
-         margin: 0;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         height: 100vh 
-         }
+body {
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    padding: 40px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.nameMain {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffec6f;
+}
+
+.smallerMain {
+    color: #b3b3b3;
+}
+
+.floating-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.floating-button {
+    width: 200px;
+    height: 60px;
+    background-color: #ffec6f;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #ffa733;
+}
+
+.floating-button a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 
+.back-button {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffcc6f;
+         color: #0d0d0d;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+      }
 
-    #container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .nameMain {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: #ffec6f; 
-    }
-
-    .smallerMain {
-      color: #b3b3b3;
-    }
-
-    .floating-button-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    .floating-button {
-      width: 200px;
-      height: 60px;
-      background-color: #ffec6f; 
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .floating-button a {
-      color: #000000;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.back-button:hover {
+         background-color: #ffa733;
+      }
 
   </style>
 </head>
 
 <body>
-  <div id="container">
-    <div class="center">
-      <p class="nameMain">Hiya~ I'm Mick</p>
-      <p class="smallerMain">I like coding stuff! You can find more information down below. 
-        PS: My Github profile is more comprehensive! :3</p>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='https://github.com/mickoissicko';">
-          <a href="https://github.com/mickoissicko">GitHub Profile</a>
+  <body>
+    <div id="container">
+      <button class="back-button" onclick="redirectToSMPPage()">
+        SMP Webpage
+     </button>
+      <div class="center">
+        <p class="nameMain">Hiya~ I'm Mick</p>
+        <p class="smallerMain">I like coding stuff! You can find more information down below. 
+          PS: My Github profile is more comprehensive! :3</p>
+        <div class="floating-button-container">
+          <div class="floating-button" onclick="window.location.href='https://github.com/mickoissicko';">
+            <a href="https://github.com/mickoissicko">GitHub Profile</a>
+          </div>
         </div>
-      </div>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='repolist.html';">
-          <a href="repolist.html">My Repositories</a>
+        <div class="floating-button-container">
+          <div class="floating-button" onclick="window.location.href='repolist.html';">
+            <a href="repolist.html">My Repositories</a>
+          </div>
         </div>
-      </div>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='socials.html';">
-          <a href="socials.html">Socials</a>
+        <div class="floating-button-container">
+          <div class="floating-button" onclick="window.location.href='socials.html';">
+            <a href="socials.html">Socials</a>
+          </div>
+        </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+
+<script>
+  function redirectToSMPPage() {
+    window.location.href = "https://smp.mick.gdn"
+  }
+</script>
 
 </html>
