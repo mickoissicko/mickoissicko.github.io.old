@@ -23,28 +23,27 @@
          align-items: center;
          justify-content: center;
          height: 100vh
-         
          }
 
       .socials-container {
          display: flex;
          flex-wrap: wrap;
-         align-items: center;
          justify-content: center;
-         height: 100vh;
+         gap: 20px;
       }
 
       .social-box {
          display: flex;
+         flex-direction: column;
          align-items: center;
          justify-content: center;
          width: 200px;
          height: 100px;
-         margin: 10px;
          background-color: rgba(0, 0, 0, 0.4);
          cursor: pointer;
          transition: background-color 0.3s ease;
          border-radius: 15px;
+         margin: 10px;
       }
 
       .social-box:hover {
@@ -53,11 +52,11 @@
 
       .social-icon {
          font-size: 24px;
-         margin-right: 10px;
+         margin-bottom: 5px;
       }
 
       .social-text {
-         font-size: 18px;
+         font-size: 18px;      
       }
 
       .youtube {
@@ -108,7 +107,7 @@
 </head>
 <body>
    <div class="socials-container">
-      <button class="back-button" onclick="window.history.back();">
+      <button class="back-button" onclick="goBack()">
          Back
       </button>
       <div class="social-box" onclick="window.location.href='https://www.youtube.com/channel/UCRuBals0-y1L6EOfu5Xw5iw';">
@@ -140,5 +139,10 @@
          <span class="social-text">mickyy_o1</span>
       </div>
    </div>
+   <script>
+      function goBack() {
+         window.location.href="index.html"
+      }
+   </script>
 </body>
 </html>
