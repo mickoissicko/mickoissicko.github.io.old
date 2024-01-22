@@ -24,7 +24,7 @@
             padding: 0;
         }
 
-        .back-button {
+.back-button {
     position: relative;
     top: 20px;
     left: 20px;
@@ -38,20 +38,18 @@
     clip-path: circle(15px at 2px 2px);
 }
 
+
+
 .back-button:hover {
     background-color: #ffa733;
 }
-
-        .back-button:hover {
-            background-color: #ffa733;
-        }
 
         h1, .cool {
             text-align: center;
         }
 
         section {
-            background-color: #fff;
+            background-color: #ffffff;
             color: #000;
             padding: 20px;
             margin: 20px;
@@ -59,7 +57,7 @@
         }
 
         pre {
-            background-color: #fff;
+            background-color: #e1dddd;
             color: #000;
             padding: 10px;
             margin: 10px 0;
@@ -91,13 +89,14 @@
         <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.</p>
         <blockquote>
             <p class="cool">NOTE: This tutorial is for a Fabric server. If you want to use something like PaperMC, Glowstone, or Airplane, figure it out -- it isn't rocket science.</p>
-        </blockquote>
+
+        </section>
 
         <section id="for-arch">
-            <h2>For Arch</h2>
+            <h2 class="ok">For Arch</h2>
 
             <h3>Step 1: Acquire the file</h3>
-            <pre><code>$ mkdir server
+            <pre><code>$ mkdir server</code></pre>
 $ cd ~/server
 $ wget https://meta.fabricmc.net/v2/versions/loader/1.19.4/0.15.3/1.0.0/server/jar
 $ mv fabric-server-mc.1.19.4-loader.0.15.3-launcher.1.0.0.jar fabric.jar</code></pre>
@@ -115,6 +114,7 @@ $ stop
 $ sudo nano server.properties</code></pre>
             <p>In the server.properties file, change the rcon port to 25575, the rcon password to root_admin, and the address to 0.0.0.0, localhost, or 127.0.0.1.</p>
         </section>
+    </section>
 
       </section>
 
@@ -143,7 +143,7 @@ $ stop</code></pre>
     </section>
 
     <section id="archlinux-setup">
-        <h1 class="ok">Archlinux Setup</h1>
+        <h2 class="ok">Configuring paths (Arch)</h2>
         <blockquote>
             <p>FYI: The following tutorial should be (almost) the same for any other text editor; however, my preferred is nano, so I will be using that. You can use anything like OSS, Neovim, Vim, or even Kate... (Kate?)</p>
         </blockquote>
@@ -166,6 +166,10 @@ $ stop</code></pre>
       </section>
 
         <section id="windows-editing-ussr-py">
+            <h2 class="ok">Configuring paths (Windows)</h2>
+            <blockquote>
+                <p class="ok">FYI: Use VSCode if you want to make your life a (little) easier.</p>
+            </blockquote>
             <h2>Step 1: Editing `ussr(-ssl).py` on Windows</h2>
             <p>Edit ussr-ssl.py using any text editor.</p>
 
@@ -190,6 +194,141 @@ $ stop</code></pre>
         </section>
 
     </section>
+
+    <section id="installing-pktriot">
+        <h2 class="ok">Installing Packetriot for Archlinux</h2>
+
+            <h3>Step 1: Installing Packetriot to expose the Flask app to your friends</h3>
+            <code>$ cd ~/path/to/ussr/directory</code><br>
+            <code>$ git clone https://aur.archlinux.org/pktriot.git</code><br>
+            <code>$ cd pktriot</code><br>
+            <code>$ makepkg -si</code><br>
+
+            <p><code>ussr-ssl.py</code>: <code>$ pktriot http 443</code></p>
+            <p><code>ussr.py</code>: <code>$ pktriot http 80</code></p>
+
+            <p>It will ask you for an Email & Password. Head over to <a href="https://packetriot.com/">Packetriot</a> and make an account, once done, proceed.</p>
+            <p>Example:</p>
+            <p>Email: mickey@koolkids.klan</p>
+            <p>Password: asirrationalaspi</p>
+            <p>This will log you in; it may say 'permission denied.' To fix this, run:</p>
+            <code>$ sudo pktriot http 443</code> for ussr-ssl.py<br>
+            <code>$ sudo pktriot http 80</code> for ussr.py
+        </section>
+
+        <section id="windows-installation-pktriot">
+            <h2>Windows Installation</h2>
+            <p>Head over to <a href="https://packetriot.com/">Packetriot</a> and make an account, once done, proceed.</p>
+
+            <p>Now that you have an account, go to the <a href="https://packetriot.com/downloads">downloads</a> page, and scroll down until you find the download for your Windows system's architecture. (32-bit or 64-bit.)</p>
+            <p>To see the architecture, watch this <a href="https://www.youtube.com/watch?v=gHeiQTn0_JU">tutorial</a></p>
+
+            <p>After you have downloaded the file, create a new folder in the 2.0 directory, and extract the pktriot.exe there. Open command prompt in an elevated window, and type:</p>
+            <code>$ pktriot.exe http 443</code> for ussr-ssl.py<br>
+            <code>$ pktriot.exe http 80</code> for ussr.py
+
+            <p>It will ask you for a login, so type in the credentials of the account you created earlier — and that's it!</p>
+        </section>
+    </section>
+
+    <section id="setting-up-the-ussr">
+        <h1>Setting up the USSR for your PC</h1>
+
+        <section id="archlinux-installation-ussr">
+            <h2>Archlinux Installation</h2>
+            <p>This guide assumes you have basic Archlinux & overall Linux experience. Please fix the issue yourself if you encounter any.</p>
+
+            <h3>Step 1: Let's install Python & dependencies</h3>
+            <code>$ sudo pacman -S python</code><br>
+            <code>$ cd ussr-xyz</code> (ussr-***xyz*** is the version, e.g., you are using version 2.2, that would be: ussr-2.2)<br>
+            <code>$ cd archlinux</code><br>
+            <code>$ chmod +x install.sh</code><br>
+            <code>$ ./install.sh</code>
+
+            <h3>Step 2: Running the USSR</h3>
+            <code>$ cd server-arch</code><br>
+            <code>$ sudo python ussr(-ssl).py</code> (ussr-ssl.py is optional, use the SSL version if you want HTTPS instead of HTTP. It doesn't matter if you will use Pktriot, though.)
+        </section>
+    </section>
+
+        <section id="windows-installation-ussr">
+            <h2>Windows Installation</h2>
+
+            <h3>Step 1: Python</h3>
+            <p>Download <a href="https://www.python.org/downloads/">Python 3.9.10</a></p>
+            <p>Run the installer, disable PATH limit, and add Python to PATH, it should be in the installer options; if it is not, refer to this <a href="https://www.youtube.com/watch?v=Y2q_b4ugPWk">tutorial</a></p>
+
+            <h3>Step 2: Dependencies</h3>
+            <p>Open an elevated command prompt window in the ussr directory.</p>
+            <code>$ cd ussr-xyz</code> (no need for this if you are already in the directory, not explaining what 'xyz' is, scroll up)<br>
+            <code>$ cd windows</code><br>
+            <code>$ "install.bat"</code>
+        </section>
+    </section>
+
+    <section id="port-forwarding-your-minecraft-server">
+        <h1>Port-forwarding your Minecraft server</h1>
+
+        <p class="cool">We will be using ngrok because it is better.</p>
+
+        <section id="installation-for-archlinux-ngrok">
+            <h2>Installation for Archlinux</h2>
+
+            <h3>Step 1: Installing ngrok</h3>
+
+            <h4>Step 1a: Install snap</h4>
+            <code>$ cd ~/</code><br>
+            <code>$ git clone https://aur.archlinux.org/snapd.git</code><br>
+            <code>$ cd snapd</code><br>
+            <code>$ makepkg -si</code>
+
+            <h4>Step 1b: Install ngrok</h4>
+            <code>$ sudo snap install ngrok</code>
+
+            <h3>Step 2: Making an account and logging in</h3>
+
+            <p>Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.</p>
+            <p>After you have made the account, navigate to the <a href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page</p>
+            <code>$ ngrok config add-authtoken THE-AUTHTOKEN-GIVEN</code>
+            <p>Change 'the-authtoken-given' to the one given on the website.</p>
+
+            <h3>Step 3: Starting Ngrok</h3>
+            <p>You do not need to start ngrok manually, <code>ussr(-ssl).py</code> does it automatically for you, unless you have <code>ngrok.functionality=False</code>.</p>
+        </section>
+    </section>
+
+        <section id="installation-for-windows-ngrok">
+            <h2>Installation for Windows</h2>
+
+            <h3>Step 1: Installing Ngrok</h3>
+
+            <p>Install <a href="https://ngrok.com">ngrok</a>. You can choose the <a href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip">64-bit version</a> or the <a href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-386.zip">32-bit version</a>.</p>
+
+            <h3>Step 2: Making an account and logging in</h3>
+
+            <p>Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.</p>
+            <p>After you have made the account, navigate to the <a href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page</p>
+            <p>Open a command prompt window in the folder where you downloaded ngrok, and type</p>
+            <code>$ ngrok.exe config add-authtoken THE-AUTHTOKEN-GIVEN</code>
+
+            <h3>Step 3: Starting the service</h3>
+            <p>You do not need to start ngrok manually, <code>ussr(-ssl).py</code> does it automatically for you, unless you have <code>ngrok.functionality=False</code>.</p>
+        </section>
+    </section>
+
+    <section id="using-webhooks">
+        <h1>Using Webhooks</h1>
+
+        <h3>Step 1: Edit these files</h3>
+        <p>Copy the webhook URL</p>
+        <img src="https://i.ibb.co/0Qb8d4q/Untitled.png" alt="Webhook URL Screenshot">
+        <p>Navigate to Line 26, and edit this:</p>
+        <code>discord_webhook_url = "ur_webhook_noob"</code>
+        <p>with the actual webhook URI.</p>
+        <img src="https://i.ibb.co/wyTZ0nH/2.png" alt="Editing Webhook URL Screenshot">
+    </section>
+</body>
+</html>
 
     <script>
         function redirectToIndex() {
