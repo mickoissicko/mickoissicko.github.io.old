@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+  <title>mick's software wiki</title>
+  <style>
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    blockquote {
+      background-color: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+  <title>USSR Installation Guide</title>
+</head>
+
+<body>
+
+  <section id="setting-up-minecraft-server">
+    <h1>Setting up the Minecraft Server</h1>
+    <blockquote>
+      <p>NOTE: This tutorial is for a Fabric server. If you want to use something like PaperMC, Glowstone, or Airplane, figure it out -- it isn't rocket science.</p>
+    </blockquote>
+
+    <section id="for-arch">
+      <h2>For Arch</h2>
+
+      <h3>Step 1: Acquire the file</h3>
+      <pre><code>$ mkdir server
+$ cd ~/server
+$ wget https://meta.fabricmc.net/v2/versions/loader/1.19.4/0.15.3/1.0.0/server/jar
+$ mv fabric-server-mc.1.19.4-loader.0.15.3-launcher.1.0.0.jar fabric.jar</code></pre>
+
+      <h3>Step 2: Install java</h3>
+      <pre><code>$ sudo pacman -S jdk-openjdk</code></pre>
+
+      <h3>Step 3: Initialise and configure</h3>
+      <pre><code>$ cd ~/server
+$ sudo nano eula.txt</code></pre>
+      <p>Add the following text:</p>
+      <pre>eula=true</pre>
+      <pre><code>$ sudo java -jar -Xms256M -Xmx5G fabric.jar
+$ stop
+$ sudo nano server.properties</code></pre>
+      <p>In the server.properties file, change the rcon port to 25575, the rcon password to root_admin, and the address to 0.0.0.0, localhost, or 127.0.0.1.</p>
+
+    </section>
+
+    <section id="for-windows">
+      <h2>For Windows</h2>
+
+      <h3>Step 1: Downloading Java</h3>
+      <p>Download <a href="https://download.bell-sw.com/java/21.0.1+12/bellsoft-jdk21.0.1+12-windows-amd64.msi">Liberica JDK</a></p>
+
+      <h3>Step 2: Initialise and start</h3>
+      <p>Make a folder somewhere safe, and name it `server`.</p>
+      <p>Download the <a href="https://meta.fabricmc.net/v2/versions/loader/1.19.4/0.15.3/1.0.0/server/jar">Fabric server software</a> in the folder</p>
+      <p>Change the name of this file to fabric.jar</p>
+      <p>Create a text document (.txt) named eula.txt and in the contents of the document, type eula=true.</p>
+      <p>Open an elevated command prompt window in the server folder</p>
+      <pre><code>$ java -jar -Xms256M -Xmx5G fabric.jar
+$ stop</code></pre>
+
+      <h3>Step 3: RCON settings</h3>
+      <p>After this, open `server.properties` with whatever text-editor, and change:</p>
+      <p>RCON port to 25575</p>
+      <p>RCON password to root_admin</p>
+      <p>RCON address localhost</p>
+
+    </section>
+
+  </section>
+
+  <section id="archlinux-setup">
+    <h1>Archlinux Setup</h1>
+    <blockquote>
+      <p>FYI: The following tutorial should be (almost) the same for any other text editor, however, my preferred is nano, so I will be using that. You can use anything like OSS, Neovim, Vim, or even Kate... (Kate?)</p>
+    </blockquote>
+
+    <section id="editing-ussr-py">
+        <h2>Step 1: Editing `ussr(-ssl).py`</h2>
+        <p>Edit ussr-ssl.py using Nano or any text editor.</p>
+  
+        <p>Let's say we have a user called Katie, and Katie put the USSR folder in ~/Desktop/USSR/Archlinux/</p>
+        <p>We would edit the file as follows if the above is met:</p>
+        <p>Line 16, Col 58</p>
+        <img src="https://i.ibb.co/yQmBMH6/step1.png" alt="Step 1 Screenshot">
+  
+        <p>Line 39, Col 48</p>
+        <img src="https://i.ibb.co/rpT4H1K/Step2a.png" alt="Step 2 Screenshot">
+  
+        <p>And that's it for the Archlinux set-up.</p>
+      </section>
+  
+      <section id="windows-editing-ussr-py">
+        <h2>Step 1: Editing `ussr(-ssl).py` on Windows</h2>
+        <p>Edit ussr-ssl.py using any text editor.</p>
+  
+        <p>Let's say we have a user called Katie, and Katie put the USSR folder in their Desktop folder. So:</p>
+        <p>C:\Users\Katie\Desktop\USSR\Windows</p>
+  
+        <p>We would edit the file as follows if the above is met:</p>
+        <p>Line 16, Col 58</p>
+        <img src="https://i.ibb.co/9VFkkxP/b.png" alt="Step 1 Screenshot">
+  
+        <p>Line 39, Col 48</p>
+        <img src="https://i.ibb.co/QjfbBwN/a.png" alt="Step 2 Screenshot">
+      </section>
+  
+      <section id="windows-editing-ngrok-path">
+        <h2>Step 2: Editing Ngrok path on Windows</h2>
+        <p>Let's say Katie placed the downloaded Ngrok executable in her D:\ drive.</p>
+        <p>D:\Ngrok\bin\ngrok.exe</p>
+        <img src="https://i.ibb.co/12GCwVC/dsa.png" alt="Ngrok Path Screenshot">
+      </section>
+</body>
+</html>
