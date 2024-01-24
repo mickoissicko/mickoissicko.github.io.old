@@ -100,30 +100,77 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-    </style>
 
-    <title>updates</title>
+        .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .floating-button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .floating-button {
+      width: 200px;
+      height: 60px;
+      background-color: #ffec6f;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-button:hover {
+      background-color: #ffa733;
+    }
+
+    .floating-button a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+
+  <title>updates & writing</title>
 </head>
 
 <body>
-    <button class="back-button" onclick="back()">
-        Back
-    </button>
-    <div id="container">
-        <h1 class="heading">Updates & Plans</h1>
-        <div class="highlight-heading-container">
-            <div onclick="window.location.href='upd/23124.htm'" class="highlight-heading">23/1/24 - Almost broke everything</div>
-            <div onclick="window.location.href='upd/22124.htm'" class="highlight-heading">22/1/24 - My essays & Arch</div>
-            <div onclick="window.location.href='upd/21124.htm'" class="highlight-heading">21/1/24 - Hyprland</div>
-            <div onclick="window.location.href='upd/20124.htm'" class="highlight-heading">20/1/24 - Today's Highlights</div>
+  <div id="container">
+    <h1 class="heading">Updates & Plans</h1>
+    <button class="back-button" onclick="redirectBack()">Back</button>
+    <div class="center">
+      <div class="floating-button-container">
+        <div class="floating-button" onclick="window.location.href='list/upd.html';">
+          <a href="list/upd.html">Blogs/Updates</a>
         </div>
+      </div>
+      <div class="floating-button-container">
+        <div class="floating-button" onclick="window.location.href='list/esy.html';">
+          <a href="list/esy.html">Literature</a>
+        </div>
+      </div>
     </div>
+  </div>
 
     <script>
-        function back() {
-            window.location.href = 'index.html';
-        }
+
+      function redirectBack() {
+        window.location.href="index.html"
+      }
+
     </script>
 </body>
 
 </html>
+
