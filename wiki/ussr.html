@@ -104,20 +104,20 @@
                 <h2 class="ok">For Arch</h2>
 
                 <h3>Step 1: Acquire the file</h3>
-                <pre><code><pre>$ mkdir server</code></pre>
+                <code><pre>$ mkdir server</code></pre>
 $ cd ~/server
 $ wget https://meta.fabricmc.net/v2/versions/loader/1.19.4/0.15.3/1.0.0/server/jar
 $ mv fabric-server-mc.1.19.4-loader.0.15.3-launcher.1.0.0.jar fabric.jar</code></pre>
 
             <h3>Step 2: Install java</h3>
-            <pre><code><pre>$ sudo pacman -S jdk-openjdk</code></pre>
+            <code><pre>$ sudo pacman -S jdk-openjdk</code></pre>
 
             <h3>Step 3: Initialise and configure</h3>
-            <pre><code><pre>$ cd ~/server
+            <code><pre>$ cd ~/server
 $ sudo nano eula.txt</code></pre>
             <p>Add the following text:</p>
             <pre>eula=true</pre>
-                <pre><code><pre>$ sudo java -jar -Xms256M -Xmx5G fabric.jar
+                <code><pre>$ sudo java -jar -Xms256M -Xmx5G fabric.jar
 $ stop
 $ sudo nano server.properties</code></pre>
             <p>In the server.properties file, change the rcon port to 25575, the rcon password to root_admin, and the address to 0.0.0.0, localhost, or 127.0.0.1.</p>
@@ -138,7 +138,7 @@ $ sudo nano server.properties</code></pre>
             <p>Change the name of this file to fabric.jar</p>
             <p>Create a text document (.txt) named eula.txt and in the contents of the document, type eula=true.</p>
             <p>Open an elevated command prompt window in the server folder</p>
-            <pre><code><pre>$ java -jar -Xms256M -Xmx5G fabric.jar
+            <code><pre>$ java -jar -Xms256M -Xmx5G fabric.jar
 $ stop</code></pre>
 
             <h3>Step 3: RCON settings</h3>
@@ -208,9 +208,9 @@ $ stop</code></pre>
 
             <h3>Step 1: Installing Packetriot to expose the Flask app to your friends</h3>
             <code><pre>$ cd ~/path/to/ussr/directory</code></pre>
-            <code><pre>$ git clone https://aur.archlinux.org/pktriot.git</code></pre><br>
-            <code><pre>$ cd pktriot</code></pre><br>
-            <code><pre>$ makepkg -si</code></pre><br>
+            <code><pre>$ git clone https://aur.archlinux.org/pktriot.git</code></pre>
+            <code><pre>$ cd pktriot</code></pre>
+            <code><pre>$ makepkg -si</code></pre>
 
             <code><pre>ussr-ssl.py</code></pre>: <code><pre>$ pktriot http 443</code></pre>
             <code><pre>ussr.py</code></pre>: <code><pre>$ pktriot http 80</code></pre>
@@ -220,7 +220,7 @@ $ stop</code></pre>
             <p>Email: mickey@koolkids.klan</p>
             <p>Password: asirrationalaspi</p>
             <p>This will log you in; it may say 'permission denied.' To fix this, run:</p>
-            <code><pre>$ sudo pktriot http 443</code></pre> for ussr-ssl.py<br>
+            <code><pre>$ sudo pktriot http 443</code></pre> for ussr-ssl.py
             <code><pre>$ sudo pktriot http 80</code></pre> for ussr.py
         </section>
 
@@ -232,7 +232,7 @@ $ stop</code></pre>
             <p>To see the architecture, watch this <a href="https://www.youtube.com/watch?v=gHeiQTn0_JU">tutorial</a></p>
 
             <p>After you have downloaded the file, create a new folder in the 2.0 directory, and extract the pktriot.exe there. Open command prompt in an elevated window, and type:</p>
-            <code><pre>$ pktriot.exe http 443</code></pre> for ussr-ssl.py<br>
+            <code><pre>$ pktriot.exe http 443</code></pre> for ussr-ssl.py
             <code><pre>$ pktriot.exe http 80</code></pre> for ussr.py
 
             <p>It will ask you for a login, so type in the credentials of the account you created earlier — and that's it!</p>
@@ -247,14 +247,14 @@ $ stop</code></pre>
             <p>This guide assumes you have basic Archlinux & overall Linux experience. Please fix the issue yourself if you encounter any.</p>
 
             <h3>Step 1: Let's install Python & dependencies</h3>
-            <code><pre>$ sudo pacman -S python</code></pre><br>
-            <code><pre>$ cd ussr-xyz</code></pre> (ussr-***xyz*** is the version, e.g., you are using version 2.2, that would be: ussr-2.2)<br>
-            <code><pre>$ cd archlinux</code></pre><br>
-            <code><pre>$ chmod +x install.sh</code></pre><br>
+            <code><pre>$ sudo pacman -S python</code></pre>
+            <code><pre>$ cd ussr-xyz</code></pre> (ussr-***xyz*** is the version, e.g., you are using version 2.2, that would be: ussr-2.2)
+            <code><pre>$ cd archlinux</code></pre>
+            <code><pre>$ chmod +x install.sh</code></pre>
             <code><pre>$ ./install.sh</code></pre>
 
             <h3>Step 2: Running the USSR</h3>
-            <code><pre>$ cd server-arch</code></pre><br>
+            <code><pre>$ cd server-arch</code></pre>
             <code><pre>$ sudo python ussr(-ssl).py</code></pre> (ussr-ssl.py is optional, use the SSL version if you want HTTPS instead of HTTP. It doesn't matter if you will use Pktriot, though.)
         </section>
     </section>
@@ -268,8 +268,8 @@ $ stop</code></pre>
 
             <h3>Step 2: Dependencies</h3>
             <p>Open an elevated command prompt window in the ussr directory.</p>
-            <code><pre>$ cd ussr-xyz</code></pre> (no need for this if you are already in the directory, not explaining what 'xyz' is, scroll up)<br>
-            <code><pre>$ cd windows</code></pre><br>
+            <code><pre>$ cd ussr-xyz</code></pre> (no need for this if you are already in the directory, not explaining what 'xyz' is, scroll up)
+            <code><pre>$ cd windows</code></pre>
             <code><pre>$ "install.bat"</code></pre>
         </section>
     </section>
@@ -285,9 +285,9 @@ $ stop</code></pre>
             <h3>Step 1: Installing ngrok</h3>
 
             <h4>Step 1a: Install snap</h4>
-            <code><pre>$ cd ~/</code></pre><br>
-            <code><pre>$ git clone https://aur.archlinux.org/snapd.git</code></pre><br>
-            <code><pre>$ cd snapd</code></pre><br>
+            <code><pre>$ cd ~/</code></pre>
+            <code><pre>$ git clone https://aur.archlinux.org/snapd.git</code></pre>
+            <code><pre>$ cd snapd</code></pre>
             <code><pre>$ makepkg -si</code></pre>
 
             <h4>Step 1b: Install ngrok</h4>
