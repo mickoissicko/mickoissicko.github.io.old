@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>NgrokSenpai Setup Guide</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../dir.html'">Back</button>
+
+    <section id="ngrok-senpai">
+        <h1>Ngrok Senpai</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
+        </section>
+
+        <section>
+        <p>
+            Does your ISP use CGNAT, or just hates everyone and blocks port-forwarding? And you are too much of a wuss
+            to call them to fix it? This is for you!
+        </p>
+        <p>
+            Is copy-pasting the multiple Ngrok proxies for each of your friends too hard? NGS' 'gotchu covered!
+        </p>
+
+        <h2>Supported Python versions</h2>
+        <ul>
+            <li>Python 3.12.1</li>
+            <li>Python 3.11.7</li>
+            <li>Python 3.9.10</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Not a stupid Docker container</li>
+            <li>Works with Archlinux</li>
+            <li>Better than Hardware Haven's solution, can work on multiple Ngrok sessions.</li>
+        </ul>
+    </section>
+
+    <section id="installation-archlinux">
+        <h1>Installation for Archlinux</h1>
+
+        <h2>Step 1: Installing ngrok</h2>
+        <h3>Step 1a: Install snap</h3>
+        <code><pre>$ cd ~/</code></pre>
+        <code><pre>$ git clone https://aur.archlinux.org/snapd.git</code></pre>
+        <code><pre>$ cd snapd</code></pre>
+        <code><pre>$ makepkg -si</code></pre>
+
+        <h3>Step 1b: Install ngrok</h3>
+        <code><pre>$ sudo snap install ngrok</code></pre>
+    </section>
+
+<section>
+        <h2>Step 2: Making an account and logging in</h2>
+        <p>
+            Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.
+        </p>
+        <p>
+            After you have made the account, navigate to the <a
+                href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page.
+        </p>
+        <code><pre>$ ngrok config add-authtoken THE-AUTHTOKEN-GIVEN</code></pre>
+    </section>
+
+    <section>
+        <h2>Step 3: Starting Ngrok</h2>
+        <p>You can start 3 ngrok tunnels in locations: in, ap, eu, au, and us.</p>
+        <code><pre>$ ngrok tcp --region eu 25565</code></pre>
+        <code><pre>$ ngrok tcp --region ap 25565</code></pre>
+        <code><pre>$ ngrok tcp --region in 25565</code></pre>
+        <code><pre>$ ngrok tcp --region au 25565</code></pre>
+        <code><pre>$ ngrok tcp --region us 25565</code></pre>
+        <p>Let's say you have 3 friends <strong>(impossible)</strong>. One is from Amsterdam, one is from Sydney, and
+            the other one is from Hong Kong. This is perfect as you can only operate 3 Ngrok tunnels per account
+            (max).</p>
+        <p>You start the tunnels.</p>
+    </section>
+
+
+        <section>
+            <h2>Step 4: Running the tool</h2>
+        <p>Copy the webhook URL</p>
+        <img src="https://i.ibb.co/0Qb8d4q/Untitled.png" alt="Webhook URL">
+
+        <p>Navigate to Line 26, and edit this:</p>
+        <code><pre>discord_webhook_url = "ur_webhook_noob"</code></pre>
+
+        <p>with the actual webhook URI.</p>
+        <img src="https://i.ibb.co/wyTZ0nH/2.png" alt="Edit Webhook URL">
+
+        <p>After you have added the URL, run the following command in the directory where <code>ngroksenpai.py</code> is
+            located.</p>
+        <code><pre>$ sudo python ngroksenpai.py</code></pre>
+
+        <p>Enter your password and it should send the links in Discord!</p>
+    </section>
+
+    <section id="installation-windows">
+        <h1>Installation for Windows</h1>
+
+        <h2>Step 1: Installing Ngrok</h2>
+        <p>Install <a href="ngrok.com">ngrok</a>. You can choose the <a
+                href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip">64-bit version</a> or the
+            <a href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-386.zip">32-bit version</a>.</p>
+    </section>
+<section>
+        <h2>Step 2: Making an account and logging in</h2>
+        <p>
+            Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.
+        </p>
+        <p>
+            After you have made the account, navigate to the <a
+                href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page.
+        </p>
+        <p>Open a command prompt window in the folder where you downloaded ngrok, and type</p>
+        <code><pre>$ ngrok.exe config add-authtoken THE-AUTHTOKEN-GIVEN</code></pre>
+    </section>
+
+    <section>
+        <h2>Step 3: Starting the service</h2>
+        <p>Open a command prompt window in the folder where you downloaded ngrok.</p>
+
+        <p>You can start 3 ngrok tunnels in locations: in, ap, eu, au, and us.</p>
+        <code><pre>$ ngrok tcp --region eu 25565</code></pre>
+        <code><pre>$ ngrok tcp --region ap 25565</code></pre>
+        <code><pre>$ ngrok tcp --region in 25565</code></pre>
+        <code><pre>$ ngrok tcp --region au 25565</code></pre>
+        <code><pre>$ ngrok tcp --region us 25565</code></pre>
+        <p>Select the region closest to your friends.</p>
+
+        <p>IN is India, AP is Asia Pacific, EU is Europe, AU is Australia, and US is the United States.</p>
+    </section>
+
+    <!-- Repeat the pattern for other sections -->
+
+</body>
+
+</html>
