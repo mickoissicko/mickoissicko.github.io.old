@@ -1,7 +1,3 @@
-# github pages
+[https://mick.gdn](Mick's Space)
 
-This is my Github pages website for mick.gdn.
-
-# NOTE
-
-This website is ***not*** related to https://smp.mick.gdn which will be offline most of the time. The smp.mick.gdn is for my Minecraft server (not Github pages.)
+> NOTE: this website is not related to [https://smp.mick.gdn](CC-MCSP)
