@@ -223,7 +223,6 @@ $ stop</code></pre>
             <p>RCON password to root_admin</p>
             <p>RCON address localhost</p>
         </section>
-
     </section>
 
     <section id="archlinux-setup">
@@ -231,8 +230,6 @@ $ stop</code></pre>
         <blockquote>
             <p>FYI: The following tutorial should be (almost) the same for any other text editor; however, my preferred is nano, so I will be using that. You can use anything like OSS, Neovim, Vim, or even Kate... (Kate?)</p>
         </blockquote>
-
-        <section id="editing-ussr-py">
             <h2>Step 1: Editing `ussr(-ssl).py`</h2>
             <p>Edit ussr-ssl.py using Nano or any text editor.</p>
 
@@ -245,7 +242,6 @@ $ stop</code></pre>
             <img src="https://i.ibb.co/rpT4H1K/Step2a.png" alt="Step 2 Screenshot">
 
             <p>And that's it for the Archlinux set-up.</p>
-        </section>
 
       </section>
 
@@ -313,10 +309,6 @@ $ stop</code></pre>
 
             <p>It will ask you for a login, so type in the credentials of the account you created earlier — and that's it!</p>
         </section>
-    </section>
-
-    <section id="setting-up-the-ussr">
-        <h1>Setting up the USSR for your PC</h1>
 
         <section id="archlinux-installation-ussr">
             <h2>Archlinux Installation</h2>
@@ -333,7 +325,6 @@ $ stop</code></pre>
             <code><pre>$ cd server-arch</code></pre>
             <code><pre>$ sudo python ussr(-ssl).py</code></pre> (ussr-ssl.py is optional, use the SSL version if you want HTTPS instead of HTTP. It doesn't matter if you will use Pktriot, though.)
         </section>
-    </section>
 
         <section id="windows-installation-ussr">
             <h2>Windows Installation</h2>
@@ -348,14 +339,12 @@ $ stop</code></pre>
             <code><pre>$ cd windows</code></pre>
             <code><pre>$ "install.bat"</code></pre>
         </section>
-    </section>
 
     <section id="port-forwarding-your-minecraft-server">
         <h1>Port-forwarding your Minecraft server</h1>
 
         <p class="cool">We will be using ngrok because it is better.</p>
 
-        <section id="installation-for-archlinux-ngrok">
             <h2>Installation for Archlinux</h2>
 
             <h3>Step 1: Installing ngrok</h3>
@@ -379,7 +368,6 @@ $ stop</code></pre>
             <h3>Step 3: Starting Ngrok</h3>
             <p>You do not need to start ngrok manually, <code><pre>ussr(-ssl).py</code></pre> does it automatically for you, unless you have <code><pre>ngrok.functionality=False</code></pre>.</p>
         </section>
-    </section>
 
         <section id="installation-for-windows-ngrok">
             <h2>Installation for Windows</h2>
@@ -398,7 +386,6 @@ $ stop</code></pre>
             <h3>Step 3: Starting the service</h3>
             <p>You do not need to start ngrok manually, <code><pre>ussr(-ssl).py</code></pre> does it automatically for you, unless you have <code><pre>ngrok.functionality=False</code></pre>.</p>
         </section>
-    </section>
 
     <section id="installation-for-mac-deb-gentoo">
         <h2>Installation for MacOS, Debian, or Gentoo</h2>
@@ -407,7 +394,6 @@ $ stop</code></pre>
         <p>Installing the USSR on MacOS, Debian, or any other Linux distribution, such as Gentoo is super easy, simple, and straight forward. You just need to manually install all the dependencies yourself, then run launcher.py and skip through dependency/prerequisite setup. That's all!</p>
 
     </section>
-</section>
 
     <section id="using-webhooks">
         <h1>Using Webhooks</h1>
