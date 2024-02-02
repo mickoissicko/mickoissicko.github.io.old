@@ -94,15 +94,91 @@
         <h1>Setting up the Minecraft Server</h1>
         <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
         </p>
-        <blockquote>
-            <p class="cool">NOTE: This tutorial is for a Fabric server. If you want to use something like PaperMC,
-                Glowstone, or Airplane, figure it out -- it isn't rocket science.</p>
+    </section>
 
-            </section>
+        <section>
+            <h1>Automatic installation</h1>
+            <p>PS. This guide is the same for Linux. USSR3 does not officially support any other operating systems other than:</p>
+                <li>Linux: Archlinux</li>
+                <li>Windows: W10/W11 x86-64</li>
+            <h2>Step 1. Downloading USSR3</h2>
+            <p>Download <a href=https://github.com/mickoissicko/ussr/releases/tag/v3.3.6>USSR3</a></p>
+            <p>Extract it with Tar or your preferred tool.</p>
+        </section>
+        <section>
+            <h2>Step 2. Installation & configuration</h2>
+        <p>Everything is almost automatic. Find your way through the CLI menu.</p>
+        <p>Install the Minecraft server, there is an option for it in the the menu.</p>
+        <p>Then, run the USSR, and go through the steps.</p>
 
+        <h2>Step 2b. Creating an Ngrok account</h2>
+
+        <p>Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.</p>
+        <p>After you have made the account, navigate to the <a href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page</p>
+        <code><pre>$ ngrok config add-authtoken THE-AUTHTOKEN-GIVEN</code></pre>
+        <p>Change 'the-authtoken-given' to the one given on the website.</p>
+
+        <h2>Step 2c. Configuring everything</h2>
+        <p>In the menu, enter '2' as the choice, and configure everything to your liking.</p>
+        <p>Read the prompt, and type 'Y/N' or whatever it asks for. Your Ngrok-Auth token is necessary if you want to use the NGROK-Autostart feature. If you do not want to enter the token, you can go to the <a href=https://dashboard.ngrok.com/get-started/setup>Ngrok setup page</a>, and manually set it up.</p>
+        <p>Otherwise, your <a href=https://dashboard.ngrok.com/get-started/your-authtoken>Ngrok authtoken should be on this page.</a></p>
+
+        <h2>Step 2d. Entering the Webhook URI</h2>
+        <img src="https://i.ibb.co/0Qb8d4q/Untitled.png" alt="Edit Webhook URL">
+        <p>Go to Discord, your server, the channel, and click on settings. Then go to integrations, and expand it.</p>
+        <p>Click on the desired integration, and copy the URL as shown. Then enter it in the prompt.</p>
+
+        </section>
+        <section>
+            <h2>Step 3. Running the USSR</h2>
+            <p>If you've done everything correctly, start the USSR.</p>
+            <p>It should send the URLs in Discord, and you should be able to visit the website on <a href=http://localhost:443>localhost:443</a></p>
+        </section>
+        <section id="installing-pktriot">
+
+            <h2>Step 4: Installing Packetriot to expose the Flask app to your friends</h2>
+            <code><pre>$ cd ~/path/to/ussr/directory</code></pre>
+            <code><pre>$ git clone https://aur.archlinux.org/pktriot.git</code></pre>
+            <code><pre>$ cd pktriot</code></pre>
+            <code><pre>$ makepkg -si</code></pre>
+
+            <code><pre>$ pktriot http 443</code></pre>
+
+            <p>It will ask you for an Email & Password. Head over to <a href="https://packetriot.com/">Packetriot</a> and make an account, once done, proceed.</p>
+            <p>Example:</p>
+            <p>Email: mickey@koolkids.klan</p>
+            <p>Password: asirrationalaspi</p>
+            <p>This will log you in; it may say 'permission denied.' To fix this, run:</p>
+            <code><pre>$ sudo pktriot http 443</code></pre> for ussr-ssl.py
+            <code><pre>$ sudo pktriot http 80</code></pre> for ussr.py
+        </section>
+
+        <section id="windows-installation-pktriot">
+            <h2>Windows Installation</h2>
+            <p>Head over to <a href="https://packetriot.com/">Packetriot</a> and make an account, once done, proceed.</p>
+
+            <p>Now that you have an account, go to the <a href="https://packetriot.com/downloads">downloads</a> page, and scroll down until you find the download for your Windows system's architecture. (32-bit or 64-bit.)</p>
+            <p>To see the architecture, watch this <a href="https://www.youtube.com/watch?v=gHeiQTn0_JU">tutorial</a></p>
+
+            <p>After you have downloaded the file, create a new folder in the 2.0 directory, and extract the pktriot.exe there. Open command prompt in an elevated window, and type:</p>
+            <code><pre>$ pktriot.exe http 443</code></pre> for ussr-ssl.py
+
+            <p>It will ask you for a login, so type in the credentials of the account you created earlier — and that's it!</p>
+        </section>
+
+    
+    </section>
+
+        <section>
+        <h1>Manual guide</h1>
+        <p>This is deprecated, please see newer guide above.</p>
+    </section>
             <section id="for-arch">
                 <h2 class="ok">For Arch</h2>
-
+                <blockquote>
+                    <p class="cool">NOTE: This tutorial is for a Fabric server. If you want to use something like PaperMC,
+                        Glowstone, or Airplane, figure it out -- it isn't rocket science.</p>
+                        </blockquote>
                 <h3>Step 1: Acquire the file</h3>
                 <code><pre>$ mkdir server</code></pre>
 $ cd ~/server
@@ -212,8 +288,8 @@ $ stop</code></pre>
             <code><pre>$ cd pktriot</code></pre>
             <code><pre>$ makepkg -si</code></pre>
 
-            <code><pre>ussr-ssl.py</code></pre>: <code><pre>$ pktriot http 443</code></pre>
-            <code><pre>ussr.py</code></pre>: <code><pre>$ pktriot http 80</code></pre>
+            <code><pre>$ pktriot http 443</code></pre>
+            <code><pre>$ pktriot http 80</code></pre>
 
             <p>It will ask you for an Email & Password. Head over to <a href="https://packetriot.com/">Packetriot</a> and make an account, once done, proceed.</p>
             <p>Example:</p>

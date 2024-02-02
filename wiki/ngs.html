@@ -94,6 +94,61 @@
         </section>
 
         <section>
+            <h1>Automatic installation</h1>
+            <p>PS. This guide is the same for both Windows/Linux</p>
+            <p>NOTE: And no, right now, the newest release of NGS (NGS2) does not support MacOS/Darwin.</p>
+            <p>NOTE: NGS2 also doesn't support the usage of any other package manager other than Pacman (Arch) or Chocolatey (Win).</p>
+            <p>If you want to use Darwin/other package managers, you will need to install a <a href=https://github.com/mickoissicko/ngroksenpai/releases/tag/v1.2.2-Stable>previous version of NGS.</a></p>
+
+            <h2>Step 1. Download NGS</h2>
+            <p>Download <a href=https://github.com/mickoissicko/ngroksenpai/releases/tag/v2.1.1-stable>NGS2</a> from Github.</p>
+            <h2>Step 1b. Extraction</h2>
+            <p>Extract the downloaded archive using <a href=https://www.rarlab.com/download.htm>Winrar</a> or any other tool.</p>
+            <p>A popular choice is 'Tar' if you use Linux.</p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 2. Running the start script</h2>
+            <p>If you are on Linux, and the start.sh script fails to start, run:</p>
+            <pre><code>$ chmod +x start.sh</code></pre>
+            <pre><code>$ ./start.sh</code></pre>
+            <p>If you are on Windows, simply double-click start.bat & accept administrator prompt.</p>
+            <p>Wait as the script installs the dependencies. If you have them preinstalled, on Linux, you can just skip the prompts.</p>
+            <p>On Windows, go to the 'config' folder, and create a new file called lock.pa with the .pa file extension. And that's it.</p>
+
+
+            <h2>Step 2b. Creating an Ngrok account</h2>
+
+            <p>Make an account on the <a href="https://dashboard.ngrok.com/signup">ngrok</a> website.</p>
+            <p>After you have made the account, navigate to the <a href="https://dashboard.ngrok.com/get-started/setup/linux">setup</a> page</p>
+            <code><pre>$ ngrok config add-authtoken THE-AUTHTOKEN-GIVEN</code></pre>
+            <p>Change 'the-authtoken-given' to the one given on the website.</p>
+
+            <h2>Step 2c. Configuring everything</h2>
+            <p>In the menu, enter '2' as the choice, and configure everything to your liking.</p>
+            <p>Read the prompt, and type 'Y/N' or whatever it asks for. Your Ngrok-Auth token is necessary if you want to use the NGROK-Autostart feature. If you do not want to enter the token, you can go to the <a href=https://dashboard.ngrok.com/get-started/setup>Ngrok setup page</a>, and manually set it up.</p>
+            <p>Otherwise, your <a href=https://dashboard.ngrok.com/get-started/your-authtoken>Ngrok authtoken should be on this page.</a></p>
+
+            <h2>Step 2d. Entering the Webhook URI</h2>
+            <img src="https://i.ibb.co/0Qb8d4q/Untitled.png" alt="Edit Webhook URL">
+            <p>Go to Discord, your server, the channel, and click on settings. Then go to integrations, and expand it.</p>
+            <p>Click on the desired integration, and copy the URL as shown. Then enter it in the prompt.</p>
+
+        </section>
+        <section>
+            <h2>Step 3. Starting NGS</h2>
+            <p>In the menu, enter '1' as your choice to navigate to the start menu. This will automatically start the client.</p>
+            <p>After 5-10 seconds, it should send the links. If it does not, <a href="https://github.com/mickoissicko/ngroksenpai/releases/tag/v1.2.2-Stable">use an older version of Ngrok</a> and refer to the Manual guide down below.</p>
+        </section>
+
+        <section>
+            <h1>Manual installation</h1>
+            <p class="cool">Please note that the below guide is deprecated.</p>
+        </section>
+
+        <section>
         <p>
             Does your ISP use CGNAT, or just hates everyone and blocks port-forwarding? And you are too much of a wuss
             to call them to fix it? This is for you!
@@ -211,9 +266,6 @@
 
         <p>IN is India, AP is Asia Pacific, EU is Europe, AU is Australia, and US is the United States.</p>
     </section>
-
-    <!-- Repeat the pattern for other sections -->
-
 </body>
 
 </html>
