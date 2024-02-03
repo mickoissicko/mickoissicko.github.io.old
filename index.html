@@ -15,18 +15,13 @@
 
   <script>
     function forceReload() {
-
         if (!localStorage.getItem('reloadExecuted')) {
-
-            var timestamp = new Date().getTime();
-            var url = window.location.href + '?timestamp=' + timestamp;
-            window.location.href = url;
-
             localStorage.setItem('reloadExecuted', 'true');
         }
     }
     window.onload = forceReload;
 </script>
+
 
   <title>mick's space</title>
   <style>
