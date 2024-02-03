@@ -13,6 +13,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
+  <script>
+    function forceReload() {
+
+        if (!localStorage.getItem('reloadExecuted')) {
+
+            var timestamp = new Date().getTime();
+            var url = window.location.href + '?timestamp=' + timestamp;
+            window.location.href = url;
+
+            localStorage.setItem('reloadExecuted', 'true');
+        }
+    }
+    window.onload = forceReload;
+</script>
+
   <title>mick's space</title>
   <style>
     body {
