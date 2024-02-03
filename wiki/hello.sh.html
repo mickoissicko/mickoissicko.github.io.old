@@ -88,14 +88,66 @@
 <body>
     <button class="back-button" onclick="window.location.href='../dir.html'">Back</button>
 
-    <section id="ngrok-senpai">
+    <section id="fsafsafsaf">
         <h1>hello.sh</h1>
         <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
         </section>
 
         <section>
-            <h2>IN PROGRESS</h2>
+            <p>
+                A cool startup script you can integrate into any shell! Whether it be the StarshipRS prompt, or the FISH interactive shell, it will work!
+            </p>
+    
+            <h2>Features</h2>
+            <ul>
+                <li>Supports Python 3.X.X</li>
+                <li>Automatic, no-fuss installation</li>
+                <li>Looks clean</li>
+                <li>Lightweight</li>
+                <li>Extremely customisable</li>
+            </ul>
         </section>
-</body>
+
+        <section>
+            <h2>Downloading the file</h2>
+            <p>First of all, we need to download the file. Before we can do that, let's install Wget or cURL.</p>
+            <p>We will be using Wget.</p>
+            <code><pre>$ sudo pacman -Sy wget</pre></code>
+            <p>Once done, we can download the archive</p>
+            <code><pre>$ wget https://github.com/mickoissicko/hello.sh/releases/download/v1.0.4-stable/hellosh-1.0.4.tar.gz</pre></code>
+            
+            <h2>Using Tar to extract the contents of the downloaded file</h2>
+            <p>Let's extract the file. Before we can do that, we need to install Tar.</p>
+            <code><pre>$ sudo pacman -S tar</pre></code>
+            <p>And extract it using:</p>
+            <code><pre>$ tar -xy hellosh-1.0.4.tar.gz</pre></code>
+            
+            <h2>Basic configuration</h2>
+            <p>Let's start.</p>
+            <code><pre>$ cd hello.sh</pre></code>
+            <code><pre>$ ./start.sh</pre></code>
+            <p>Select 1 to change the *Fetch client. In this guide, we will be using ScreenFetch as the installation script automatically installs it.</p>
+            <p>ScreenFetch is the default, however, you can use any *Fetch client: uwufetch, neofetch, etc.</p>
+            
+            <h2>Installation</h2>
+            <p>Installing it is even easier. Just navigate to wherever your terminal configuration is saved, and copy the path.</p>
+            <p>Mine is saved in ~/.config/fish/config.fish. Yours will differ.</p>
+            <p>Now, open the menu, and select '2', then enter the location when prompted.</p>
+            <p>Instead of using '~', please use '/home/your_username'. You can get your username by running this command:</p>
+            <code><pre>$ whoami</pre></code>
+            <p>Let's say Katie is installing this. The result would be:</p>
+            <code><pre>Katie</pre></code>
+            <p>And Katie likes using the FISH shell. She would use the following path:</p>
+            <code><pre>/home/katie/.config/fish/config.fish</pre></code>
+            <p>This will differ.</p>
+
+            <h2>Testing</h2>
+            <p>Now that you are done, close the terminal window, and open a new one.</p>
+            <p>And et voila! You will see a cool welcome screen.</p>
+            <p>Consider using the script with the 'ly' greeter, it will display the message upon start.</p>
+        </section>
+
+
+    </body>
 
 </html>
