@@ -109,7 +109,7 @@
         </section>
 
         <section>
-            <h2>Downloading the file</h2>
+            <h2>Step 1. Downloading the file</h2>
             <p>First of all, we need to download the file. Before we can do that, let's install Wget or cURL.</p>
             <p>We will be using Wget.</p>
             <code><pre>$ sudo pacman -Sy wget</pre></code>
@@ -118,14 +118,15 @@
         </section>
 
         <section>
-            <h2>Using Tar to extract the contents of the downloaded file</h2>
+            <h2>Step 2. Using Tar to extract the contents of the downloaded file</h2>
             <p>Let's extract the file. Before we can do that, we need to install Tar.</p>
             <code><pre>$ sudo pacman -S tar</pre></code>
             <p>And extract it using:</p>
             <code><pre>$ tar -xy hellosh-1.0.4.tar.gz</pre></code>
             </section>
 
-            <h2>Basic configuration</h2>
+        <section>
+            <h2>Step 3. Basic configuration</h2>
             <p>Let's start.</p>
             <code><pre>$ cd hello.sh</pre></code>
             <code><pre>$ ./start.sh</pre></code>
@@ -134,7 +135,7 @@
         </section>
             
         <section>
-            <h2>Installation</h2>
+            <h2>Step 4. Installation</h2>
             <p>Installing it is even easier. Just navigate to wherever your terminal configuration is saved, and copy the path.</p>
             <p>Mine is saved in ~/.config/fish/config.fish. Yours will differ.</p>
             <p>Now, open the menu, and select '2', then enter the location when prompted.</p>
@@ -148,7 +149,7 @@
         </section>
 
         <section>
-            <h2>Testing</h2>
+            <h2>Step 5. Testing</h2>
             <p>Now that you are done, close the terminal window, and open a new one.</p>
             <p>And et voila! You will see a cool welcome screen.</p>
             <p>Consider using the script with the 'ly' greeter, it will display the message upon start.</p>
