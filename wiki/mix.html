@@ -186,5 +186,24 @@ print_simple_hello_world<>
                 <p>Try it out!</p>
         </section>
 
+<section>
+    <h2>Simple mathematics</h2>
+    <p>Let's define two  variables, add them, and print the sum.</p>
+    <code><pre>
+_: this is a comment, under the comment is a variable set to string
+variable :: #ch<"hello world">
+
+func helloWorld<>@
+    out<variable, ;is the variable we stored as a string!;>
+
+_: basic maths
+var :: #i(1)
+
+func addition<>@
+    result :: var + var
+    out<var,;+;,var,;=;,result>
+    </pre></code>
+</section>
+    
     </body>
 </html>
