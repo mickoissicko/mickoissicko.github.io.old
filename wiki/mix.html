@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script>
+        function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+                localStorage.setItem('reloadExecuted', 'true');
+            }
+        }
+        window.onload = forceReload;
+    </script>
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>Mix</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../dir'">Back</button>
+
+    <section id="fsafsafsaf">
+        <h1>Mix</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
+        </section>
+    
+            <section>
+            <h2>Requirements</h2>
+            <ul>
+                <li>Python 3.X.X</li>
+                <li>PyInstaller</li>
+            </ul>
+        </section>
+
+        <section>Documentation
+            <h2>Syntax</h2>
+            <p>Mix's syntax is 90% Python at the moment, but this language will be feature-packed.</p>
+            <p>Here is the syntax cheat-sheet:</p>
+            <code><pre>out = print</pre></code>
+            <code><pre><> = () </pre></code>
+            <code><pre>;; = ""</pre></code>
+            <code><pre>if = while</pre></code>
+            <code><pre>>> = in</pre></code>
+            <code><pre>/ = range</pre></code>
+            <code><pre>@ = :</pre></code>
+            <code><pre>func = def</pre></code>
+            <code><pre>_: = #</pre></code>
+            <code><pre>#f = float</pre></code>
+            <code><pre>#i = int</pre></code>
+            <code><pre>#ch = str</pre></code>
+            <code><pre>char = __name__</pre></code>
+            <code><pre>:: = =</pre></code>
+            <p>The syntax looks overly complicated (for no reason) but that is because the language is in development.</p>   
+            <p>All of those will have a purpose.</p>         
+        </section>
+
+        <section>
+            <h2>Mux</h2>
+            <p>Mux is the compilation tool for Mix.</p>
+            <p>The usage is as follows: mux <input_file><p>
+            <p>Mux is cross-platform, and is OS-specific. It generates a binary depending on whatever system you're on.</p>
+            <p>If you run Mux with Windows, it compile your MIX file into a (.exe). If you are on Mac or Linux, it will compile the binaries for those accordingly.</p>
+        </section>
+
+        <section>
+            <h2>Hello, world!</h2>
+            <p>Let's create our first ever 'Hello, world!' program in Mix.</p>
+            <p>Start by create a file ending in the file-extension '.mix'. Funnily, this is not required because I think the compiler accepts any file as long as its syntax is correct. That is to be fixed. Besides the point: create a file ending with '.mix'.</p>
+            <p>Once created, add in the following line:</p>
+            <code><pre>out<;hello, world!;></pre></code>
+            <p>Save the file, and open a terminal. For Linux/Mac:</p>
+            <code><pre>./mux myapp.mix</pre></code>
+            <p>For Windows:</p>
+            <code><pre>mux.exe myapp.mix</pre></code>
+            <p>It takes a while, but it should be compiled. To run your application, open the 'dist' folder it created, and run:</p>
+            <code><pre>./myapp</pre></code>
+            <code><pre>"myapp.exe"</pre></code>
+        </section>
+
+        <section>
+            <h2>Datatypes</h2>
+            <p>Start by create a file ending in the file-extension '.mix'. Funnily, this is not required because I think the compiler accepts any file as long as its syntax is correct. That is to be fixed. Besides the point: create a file ending with '.mix'.</p>
+            <p>Once created, add in the following lines:</p>
+            <pre><code>
+_:define our module
+                
+func var_and_datatype<variable, name>@
+    out<f;{name} is a {type<variable>.char};)
+            
+_:take variable
+var :: 1
+                
+_:take variable, but as float
+var2 :: #f<2>
+                
+_:now as a string
+var3 :: #ch<;words & numbers;>
+                
+var_and_datatype(var, "var")
+var_and_datatype(var2, "var2")
+var_and_datatype(var3, "var3")
+                
+func print_simple_hello_world<>@
+    out<;hello, world!;>
+                
+print_simple_hello_world<> 
+                </code></pre>
+                <p>Try it out!</p>
+        </section>
+
+    </body>
+</html>
