@@ -101,28 +101,96 @@
         <h1>Mix</h1>
         <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
         </section>
-
+        
         <section>
-            <h2>Documentation</h2>
-            <a href="https://github.com/mickoissicko/mux">The documentation can be read here</a>
+            <h2>Mix is easy</h2>
+            A simple 'hello world' can be printed in two ways:
+            <li>Using a module</li>
+            <li>Directly printing it from the entry initialisation point</li>
+
+            <p>Indentation in Mixlang is optional, but if you do choose to indent, it must be consistent.</p>
+            <p>By that, I mean the arrows must be indented correctly, and should only be at the start of the file, following previous indentation (if any).</p>
+            <p>To better explain this, look at the example below:</p>
+
+
+<pre>
+<code>
+[entry.Init] _: like the main function in C/C++. it is also case sensitive
+
+-->
+    out ;hello, world; _: printing hello world to the console
+
+    $exit::0 _: return 0
+<--
+
+[entry.Stop] _: terminating the script.
+</code>
+</pre>
+             
+                
+        
+            <p>This example is correct. However, the example below isn't:</p>
+            
+<pre>
+<code>
+[entry.Init] _: like the main function in C/C++. it is also case sensitive
+
+-->
+    out ;hello, world; _: printing hello world to the console
+   
+      $exit::0 _: this is indented inconsistently, and will result in an error
+<--
+
+[entry.Stop] _: terminating the script.
+</code>
+</pre>
+
         </section>
 
         <section>
-            <h2>Hello, world!</h2>
-            <p>Let's create our first ever 'Hello, world!' program in Mix.</p>
-            <p>Start by create a file ending in the file-extension '.mix'. Funnily, this is not required because I think the compiler accepts any file as long as its syntax is correct. That is to be fixed. Besides the point: create a file ending with '.mix'.</p>
-            <p>Once created, add in the following line:</p>
-            <code><pre>out<;hello, world!;></pre></code>
-            <p>Save the file, and open a terminal. For Linux/Mac:</p>
-            <code><pre>./mux myapp.mix</pre></code>
-            <p>For Windows:</p>
-            <code><pre>mux.exe myapp.mix</pre></code>
-            <p>It takes a while, but it should be compiled. To run your application, open the 'dist' folder it created, and run:</p>
-            <code><pre>./myapp</pre></code>
-            <code><pre>"myapp.exe"</pre></code>
+            <h2>+Cursors & -Cursors</h2>
+            <p>Think of +Cursors and -Cursors (also known as Plusors or Minusors) as Brainfuck's pointers.</p>
+            <p>They tell the Mux JIT compiler when to start construction code and blocks. The role of Plusors and Minusors is very useful. Take this example:</p>
+     
+<pre>
+<code>
+[entry.Init]
+
+-->
+    call ;main; _: calling the main module (not to be confused with the script entry initialisation point)
+    call ;helloworld2; _: the code is executed procedurally
+<--
+
+.module ;main;-> _: a '->' shows the starting point of whatever function, script etc. not to be confused with +C or -C
+-->
+    out ;hello, world;
+    
+    ;if 20 ?: 5->
+    -->
+        out ;20 equal to 5;
+    <--
+
+    ;else
+    -->
+        out ;20 unequal to 5;
+    <--
+
+<--
+
+.module ;helloworld2;->
+-->
+    out ;hello world from second module;
+<--
+
+[entry.Stop] _: terminating the script.
+</code>
+</pre>
+
         </section>
-    </pre></code>
+
 </section>
     
     </body>
 </html>
+
+
