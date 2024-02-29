@@ -146,6 +146,108 @@
 
     </section>
 
+    <section>
+        <h2>Configuration</h2>
+        <p>
+            When you run the binary and generate the configuration file, it gives you an option to edit the file.
+
+            If you do not choose to edit right away, it prints the path to the YAML configuration file.
+
+            It is located at start/config. To edit the configuration file, use your preferred editor, e.g. nano.
+
+            nano start/config/pref.yaml
+
+            The contents should look like this (provided you did not edit beforehand):
+
+<code><pre>
+# Edit the PORT value to choose a custom port
+# However, you can restart the client and edit it via that
+                
+# Edit the ADDR value to choose a custom address to start the server on
+# You can also restart the client and edit the ADDR via that
+                
+# Example ports: 22, 80, 443, 3000, 5000, 8000
+# Example addrs: 127.0.0.1, localhost, 192.168.69.42
+                
+PORT: foo
+ADDR: bar
+                
+# View the documentation @ https://mick.gdn/wiki/mms for more info
+</pre></code>
+
+        </p>
+    </section>
+
+    <section>
+        <h2>Ports & Addresses</h2>
+        <p>
+            You might be confused by the 'PORT' and 'ADDR' fields. This section should explain those in detail.
+
+            Let's take a closer look:
+
+<code><pre>
+PORT: foo
+ADDR: bar
+</pre></code>
+         
+
+            Of course. Using the popular 'foo' and 'bar' to represent unknown variables, we have two fields.
+
+            <strong>PORT</strong> and <strong>ADDR</strong>. Anyone who has been on the internet for long enough
+            knows what ports and addresses are, but maybe not in detail.
+        </p>
+
+        <p>
+            <em><a href="https://en.wikipedia.org/wiki/Port_(computer_networking)">Please read this text about ports,</a></em>
+            and this <em><a href="https://www.kaspersky.com/resource-center/definitions/what-is-an-ip-address">text about addresses</a></em>.
+
+            A port is needed to port-forward a web service running locally. This application runs locally. When you start the Flask server,
+            it hosts itself on whatever port you specified alongside the IP address. But how is that of any significance on localhost?
+        </p>
+
+        <p>
+            '127.0.0.1' or more commonly known as 'localhost' is the address only your computer, and <strong>SOLELY</strong> your <em>own</em>
+            computer  can access. Even if you are on a LAN with other devices that can interact with your computer, they won't be able to
+             access your computer's localhost (127.0.0.1). They will be able to access your computer
+             <a href="https://www.lifewire.com/what-is-a-private-ip-address-2625970">by its reserved address</a>.
+        </p>
+
+        <p>
+            Let's say you host the application on localhost (127.0.0.1) on another computer, but you have a port-forwarding app like PacketRiot.
+
+            You SSH into the computer and start the PKTRIOT app on your computer. It won't be able to find any web services running.
+
+            This is because the Flask server is running on that computer's localhost. You need to start the Flask app on the computer's
+            private address. (e.g. 192.168.18.49).
+        </p>
+
+        <p>
+            I won't be teaching
+            <a href="https://www.lifewire.com/how-to-port-forward-4163829">how to port forward</a>, but this is 
+            almost everything you need to know to get it up and running.
+        </p>
+    </section>
+
+    <section>
+        <h2>Using PacketRiot</h2>
+        <p>
+            Believe it or not, it's pretty easy. Just make sure you use the right port and IP address.
+
+            Make an account on PacketRiot, which is 
+            <strong><em><a href="https://mick.gdn/wiki/ussr#installing-pktriot">explained in detail over here.</a></em></strong>
+        
+            After you are done, execute the following command:
+
+<code><pre>
+$ pktriot http YOUR_PORT
+</pre></code>
+
+            Make sure to run it on the computer your Flask server is running. You also have the option to
+
+            <a href="https://stackoverflow.com/questions/30241279/flask-how-to-make-an-app-externally-visible-through-a-router">manually port-forward the server</a>, but that will be explained in another guide later.
+        </p>
+    </section>
+
 </body>
 
 </html>
