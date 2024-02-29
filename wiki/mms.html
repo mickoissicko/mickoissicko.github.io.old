@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script>
+        function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+                localStorage.setItem('reloadExecuted', 'true');
+            }
+        }
+        window.onload = forceReload;
+    </script>
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        p {
+           line-height: 1.7;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>Mix Message Server</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../dir'">Back</button>
+
+    <section id="fsafsafsaf">
+        <h1>The Mix Message Server</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, colored-orange, on the top-left of the page to go back.
+        </p>
+    </section>
+
+    <section>
+        <h2>Why choose the MMS</h2>
+        <p>
+            The Mix Messaging Server (MMS) is a great option to chat 
+            with your friends if you don't want to use social media applications such as 
+            Discord, Instagram, or Facebook.
+        </p>
+
+        <p>
+            This is because you have 100% control over MMS. 
+            You can read your friends' messages with ease, as they are stored in a single file. 
+            And MMS is super private. 
+            
+            MMS does not have most of the built-in privacy features that you see today with famous
+            social-media networks such as Twitter or Reddit, but it gives you the opportunity to set
+            those up yourselves.
+
+            With MMS, you don't have to worry about others spying on your messages. You can talk about
+            literally <strong><em>anything</em></strong>, and don't have to worry about anyone looking
+            at those messages.
+        </p>
+
+        <p>
+            The recommended way to set up MMS is using the Tor Relay, for which you can 
+            <a href="https://reintech.io/blog/installing-setting-up-tor-relay-debian-12">find many guides</a>
+            on the internet.
+        </p>
+
+        <p>
+            <strong>Do note, networking tends to get <em>pretty tedious and technical</em> at times.
+                A better guide for setting up MMS on the Tor relay will come soon!</strong>
+        </p>
+
+    </section>
+
+</body>
+
+</html>
