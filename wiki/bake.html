@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script>
+        function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+                localStorage.setItem('reloadExecuted', 'true');
+            }
+        }
+        window.onload = forceReload;
+    </script>
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>Bake</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../dir'">Back</button>
+
+    <section id="fsafsafsaf">
+        <h1>Bake</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
+        </section>
+
+        <section>
+            <p>
+                An alternative to Makefile.
+            </p>
+        </section>
+
+        <section>
+            <h2>Requirements</h2>
+            <p>
+                You need a <a href="https://github.com">Github</a> account, 
+                a Github repository, and <a href="https://git-scm.com/downloads">Git SCM.</a>
+            </p>
+            <p>
+                Make sure to correctly
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">
+                configure Git</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Usage</h2>
+            <p>
+                Usage is easy. The syntax of Bake is easy too. Make a file, 
+                case-sensitive, titled 'Bakefile' and in it, add two functions:
+            </p>
+            <p>
+                <b>!main{}</b>
+            </p>
+            <p>
+                <b>!serve{}</b>
+            </p>
+            <p>
+                In the Main function, you can define commands like this:
+            </p>
+
+<code>
+    <pre>
+!main{
+    >echo 'hello world';
+}
+
+!serve{
+    >echo 'goodbye world';
+}
+    </pre>
+</code>
+
+    <p>
+        Indentation does <b>not</b> matter. Placement of curly braces does. For example:
+        <code>
+            <pre>
+!main{>echo 'hi';}</pre></code>
+        Will not execute.
+    </p>
+        <p>
+            But,
+            <code>
+                <pre>
+!main{
+    >echo 'hi';
+}</pre></code>
+            Will execute.
+        </p>
+        <p>
+            Bake uses your default shell. So you can use any shell commands from your specific shell.
+            Using Fish? Use Fish commands. Using Batch? Go ahead! But remember:
+        </p>
+        <p>
+            Bake does not execute them as an external script, so:
+            <code>
+                <pre>
+@echo off</pre></code>
+        
+            For Batch is useless, as it runs the commands live.
+        </p>
+        </section>
+
+        <section>
+            <h2>Variables</h2>
+            <p>
+                Variables are easy to declare. And string variables 
+                also do not need to be declared inside of single/double quotes.
+            </p>
+            <p>
+                There is no concept of constants, by the way. Anyway, here's how you can declare
+                variables:
+                <code>
+                    <pre>
+MyStr: [a string];
+MyVar: [69];</pre></code>
+
+                Cool, right? The value inside the squared braces is the variable.
+                <p>
+                    You can access these variables like this:
+                    <code><pre>
+src: [src/main.c src/file2.cpp];
+cxx: [g++];
+out: [output_file];
+hello: [hello];
+world: [world];
+
+!main{
+    >[cxx] -o [out] [src];
+    >echo [hello];
+}
+
+!serve{
+    >echo [world];
+}
+</pre></code>
+                    <p>
+                        And the output would be:
+<code><pre>
+hello
+world
+</pre></code>
+<p>
+    And the output file will also be generated (if main.c and file2.cpp) contain genuine
+    modules that are executed when the output is run.
+</p>
+                    </p>
+                </p>
+            </p>
+        </section>
+
+    </body>
+
+</html>
