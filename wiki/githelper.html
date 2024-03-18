@@ -105,9 +105,229 @@
 
         <section>
             <p>
-                Nothing here at the moment... will add soon!
+                Git Helper. A new and improved way to manage your Github repositories! Before we start,
+                Here are the features that are currently under development:
+                <p>
+                    <li>Interactive Web UI</li>
+                    <li>Interactive COMMIT box</li>
+                    <li>Interactive ADDFILES box</li>
+                    <li>Incorporation of other Git features</li>
+                </p>
+                <p>
+                    You can expect the upcoming changes enlisted above to be added at any point in time to
+                    Gelper.
+                </p>
             </p>
         </section>
-    </body>
 
+        <section>
+            <h2>Pronunciation</h2>
+            <p>
+                Before using Gelper, you should know how to pronounce it, right? Here's the correct
+                pronunciation versus the incorrect pronunciation:
+                <p>
+                <li><b>Correct: </b><em>Gell-per</em></li>
+                <li><b>Incorrect: </b><em>Jell-qer</em></li>
+                <li><b>Incorrect: </b><em>Jell-per</em></li>
+                <p>
+                    Yes! Jelper and <a href="https://www.healthline.com/health/jelqing">Jelqer</a>
+                     are both incorrect pronunciations!
+                     <p>
+                        <b>P.S. Don't click the hyperlink on 'Jelqer'</b>
+                     </p>
+                </p>
+                </p>
+            </p>
+        </section>
+
+        <section>
+            <h2>Requirements</h2>
+            <p>
+                You need a <a href="https://github.com">Github</a> account, 
+                a Github repository, and <a href="https://git-scm.com/downloads">Git SCM.</a>
+            </p>
+            <p>
+                Make sure to correctly
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">
+                configure Git</a>.
+            </p>
+            <p>
+                Now, download <a href="https://github.com/mickoissicko/githelper/releases">Gelper</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Setting an alias</h2>
+            <p>
+                Configuration is very, very easy. Gelper utilises the human-friendly data-serialisation
+                YAML format!
+            </p>
+            <p>
+                To start off, make an alias for Gelper. Here's how:
+            </p>
+            <p>
+                On Windows, edit the Path system environment variable, and add the Gelper executable path,
+                without the executable. Now you can run Gelper with 'gelper' or whatever the name of the
+                executable is.
+            </p>
+            <p>
+                On Linux, open your DOT Shell file. I use the Fish shell, so for me it would be:
+                '~/.config/fish/config.fish'. Anyways, add this line in the configuration file:
+            </p>
+<code><pre>
+alias gelper="/path/to/gelper/executable/file"
+</pre></code>
+            <p>
+                That path has to be absolute. Why absolute? To save you pain. Here's why:
+<code><pre>
+alias gelper="../../path/to/gelper/executable/file"
+</pre></code>
+<p>
+    But if you do not want to do that, you can just place the executable in the location of your
+    DOT Files, and easily do:
+</p>
+<code><pre>
+alias gelper="gelper"
+</pre></code>
+<p>
+    And remember, it has to be the executable's full name, extensions matter. Let's say it is named
+    'gelper.bin', then it would be 'gelper.bin'. It is also case-sensitive.
+</p>
+<p>
+    Anyways, replace the 'path/to/gelper/executable/file' with the path to the executable. You can place
+    yours in '~/Documents/executables/gelper', and set that as the path. 
+    <p>To avoid conflicts, remove
+    the tilde, and append (instead) '/home/USERNAME', where the USERNAME <b>(case-sensitive)</b>, is
+    the username of your Linux PC.</p>
+</p>
+            </p>
+        </section>
+
+        <section>
+            <h2>Configuration</h2>
+            <p>
+                <b>Remember</b>: <em>Gelper must be run inside a Github repository!</em>
+            </p>
+            <p>
+                Starting off, navigate to the folder where the executable is stored, and run this
+                command:
+<code><pre>
+gelper -cfg
+</pre></code>
+                <p>
+                    That command will generated a YAML configuration file with the name 'pref.yml'.
+                </p>
+            </p>
+            <p>
+                Now, open 'pref.yml' and the contents of it should look like this:
+<code><pre>
+# By default, some flags are true/false
+MakeFiles: True
+Cleanup: True
+AutoPush: Off
+# The AutoPush flag pushes the changes automatically in the end
+#
+# Change the value of MakeFiles to false if: 
+# You do not want the program to automatically make 'commit' and 'addfiles' files
+# Change it to true if you do want that behaviour
+#
+# The cleanup flag just deletes those files upon exit
+</pre></code>
+            </p>
+            <p>
+                Read the comments. They should give you an idea of how to use it.
+                Remember, it is case-sensitive, so 'True' has to be exactly 'True' or 'False', and
+                not 'true' or 'false'. Similarly, you can't see 'Off' to 'True'. It has to be 'On'.
+            </p>
+            <p>
+                The MakeFiles flag automatically generates the 'commit' and 'addfiles' files, whereas
+                if it were 'False', then it would not generate those files, and instead, you'd be
+                prompted for their creation. You can choose no and manually create them.
+            </p>
+            <p>
+                The Cleanup flag, as said in the comments, deletes those files upon exit.
+            </p>
+            <p>
+                The AutoPush flag automatically pushes your changes to Github when you are done
+                editing and press 'Y' in the prompt.
+            </p>
+            <p>
+                It is Off by default to avoid any rash decisions. If 'Off', then Gelper prompts you
+                if you want to push changes or no. You can select 'n' as no, and push those changes
+                later after reviewing them (if you really want to).
+            </p>
+        </section>
+
+        <section>
+            <h2>Commit & Addfiles</h2>
+            <p>
+                When you start Gelper, and if the MakeFiles flag is 'True' it will make two files:
+                <b><em>commit</em></b> and <b><em>addfiles</em></b>.
+                <p>
+                    If the flag is 'False', then you will be prompted for their creation. If you select
+                    no, then you can manually create them later.
+                </p>
+            </p>
+            <p>
+                In the <em><b>commit</b></em> file, you can specify the message for each file
+                you will be committing.
+            </p>
+            <p>
+                In the <em><b>addfiles</b></em> file, you can specify which files you want to stage
+                for commit.
+            </p>
+        </section>
+
+        <section>
+            <h2>An example</h2>
+            <p>
+                Let's say you run Gelper in the Github repository you wish to edit.
+                Make sure to run it in the root folder to avoid relative paths or having to add paths
+                like '../files/a_file.ext'.
+            </p>
+            <p>
+                Anyways, let's say you want to add these files to the Github repository:
+                <p>
+                    <li>MyFile.txt</li>
+                    <li>HisFile.txt</li>
+                    <li>OurFile.communism</li>
+                    <li>TheirFile.saddness</li>
+                </p>
+            </p>
+            <p>
+                Here's how you would do that. Given that you've run Gelper, and the 'commit'
+                and 'addfiles' files have been created, you can start by editing
+                'addfiles' first:
+            </p>
+<code><pre>
+MyFile.txt
+HisFile.txt
+OurFile.communism
+TheirFile.saddness
+</pre></code>
+            <p>
+                Now, let's edit the 'commit' file:
+            </p>
+<code><pre>
+Add my file
+Added his file
+Added our file
+Added their file
+</pre></code>
+            <p>
+                Gelper avoids the unnessescary jargon. Remember, line numbers matter. Here's what 
+                I mean:
+                <p>
+                    addfiles: On Line 1, we added 'MyFile.txt'.
+                </p>
+                <p>
+                    commit: On Line 1, we added the message for 'MyFile.txt'. 
+                </p>
+            </p>
+            <p>
+                So yes, no need to specify filename in 'commit'. Makes workflow fast!
+            </p>
+        </section>
+
+    </body>
 </html>
