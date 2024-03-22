@@ -157,6 +157,48 @@
         </section>
 
         <section>
+            <h2>Flags</h2>
+            <p>
+                Gelper uses command-line arguments (commonly called 'flags'), to determine how you want
+                to execute it.
+            </p>
+            <b>Advantages:</b>
+            <p>
+                <li>Easier</li>
+                <li>Minimal setup</li>
+                <li>Minimal configuration</li>
+                <li>No need for extra files like '.githelper' or 'cfg/pref.yml'</li>
+            </p>
+            <p>
+                There are two flags at the moment: '--d' and '--k'. You can't really tell what they do
+                but let me explain:
+                <h3>'--d' flag</h3>
+                <p>
+                    The '--d' flag stands for 'detached'. It runs Gelper in a new session, meaning:
+                    <li>Direct launch</li>
+                    <li>No configuration</li>
+                </p>
+                <p>
+                    When running Gelper, 'addfiles' and 'commit' will be created if they do not exist.
+                    You will be prompted for their creation. In the end, both of the files will be
+                    removed. Use '--k', or 'keepfile' to keep those files; to not remove them.
+                </p>
+                <p>
+                    After making the files and including commit info etc. you will be prompted if
+                    you want to push these changes after the program processes the files, adds
+                    to git, and commits. You can select either 'y' for yes or 'n' for no.
+                </p>
+            </p>
+            <p>
+                <h3>'--k' flag</h3>
+                <p>
+                    '--k' stands for 'keep files'. You can add it after '--d' so the program
+                    doesn't auto-delete 'addfiles' and 'commit' files after adding/committing. 
+                </p>
+            </p>
+        </section>
+
+        <section>
             <h2>Setting an alias</h2>
             <p>
                 Configuration is very, very easy. Gelper utilises the human-friendly data-serialisation
