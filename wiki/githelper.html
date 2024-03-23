@@ -157,6 +157,42 @@
         </section>
 
         <section>
+            <h2>Quick Start</h2>
+            <p>
+                In the new and improved, latest Gelper2 was added the Quick Start (QS) feature.
+            </p>
+            <p>
+                The QS feature made other features such as configuration redundant, ergo those have
+                been deprecated. Please download '1.1.0 stable' if you wish to use the Legacy Gelper.
+            </p>
+            <p>
+                The QS feature enables you to quickly add and commit files. You need to
+                use the QS mode via the '--q' flag. Here's how:
+<code><pre>
+gelper2 --q 'filename.extension' :: "message to commit to github repo"
+</code></pre>
+            </p>
+            <p>
+                The syntax looks amazing. Version 2.0.1 is expected to replace the double-colon
+                to something like '|>' or '--'.
+            </p>
+            <p>
+                Anyways, the 'filename.extension' should be the path to your file. Here's how
+                it would look if you were adding 'file.c' in 'src/files/c/'.
+            </p>
+<code><pre>
+gelper2 --q 'src/files/c/file.c' :: "Add C file -- file.c"
+</code></pre>
+            <p>
+                Other than this, you can use '!push' at the end to automatically push all
+                staged commits. Here's how that would look:
+            </p>
+<code><pre>
+gelper2 --q 'src/files/c/file.c' :: "Add C file -- file.c" !push
+</code></pre>
+        </section>
+
+        <section>
             <h2>Flags</h2>
             <p>
                 Gelper uses command-line arguments (commonly called 'flags'), to determine how you want
@@ -243,6 +279,13 @@ alias gelper="gelper"
     the username of your Linux PC.</p>
 </p>
             </p>
+        </section>
+
+        <section>
+            <h2>Deprecation notice</h2>
+            <p class="cool"><b><em>Please note: the below guide is deprecated
+                and for version 1.1.0-stable!
+            </em></b></p>
         </section>
 
         <section>
