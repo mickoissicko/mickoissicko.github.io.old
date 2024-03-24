@@ -107,8 +107,25 @@
     .back-button:hover {
       background-color: #ffa733;
     }
+
+    .old-button {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      background-color: #ffcc6f;
+      color: #0d0d0d;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 15px;
+    }
   </style>
 </head>
+
+  <button class="old-button" onclick="redirectToOldPage">
+    Old Website
+  </button>
 
 <body>
   <div id="container">
@@ -148,6 +165,10 @@
 
   function redirectToSMPPage() {
     window.location.href = "https://smp.mick.gdn"
+  }
+
+  function redirectToOldPage() {
+    window.location.href = "old/index_old.html"
   }
 
 </script>
