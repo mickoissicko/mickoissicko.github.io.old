@@ -176,6 +176,71 @@ gelper2 --q 'src/files/c/file.c' :: "Add C file -- file.c" !push
         </section>
 
         <section>
+            <h2>Cloning</h2>
+            <p>
+                Gelper, quite like Git, can easily (now) in v2.1.3 do most of the things Git does.
+                Out of those, the most prominent are cloning, committing, and pushing!
+            </p>
+            <p>
+                Start Gelper with '--c' to clone. It displays a prompt. In it, enter your Github
+                username, and the repository name (not link!!).
+            </p>
+            <p>
+                You can also use '--dc' to directly clone. This one does not display the prompt.
+                Instead, you can use it like:
+<code><pre>
+gelper2 --dc mickoissicko/githelper
+</pre></code>
+                <p>
+                    And that will clone the 'githelper' repository.
+                </p>
+            </p>
+            <p>
+                You can also use '--dc-ng' to truncate '.git' from the repository link.
+                This will clone only the repository without the '.git' extension in the end.
+            </p>
+<code><pre>
+gelper2 --dc-ng mickoissicko/githelper
+</pre></code>
+        </section>
+
+        <section>
+            <h2>Archlinux User Repository</h2>
+            <p>
+                Gelper (natively) supports the AUR. And will support other repositories like the AUR
+                soon! To utilise this feature, you can run Gelper with '--aur'.
+            </p>
+            <p>
+                Again, just using the '--aur' flag will display a prompt 'Software:' and you
+                would have to specify the software name, like 'sharexin.'
+            </p>
+            <p>
+                It operates in the '/home/USER/aur.gelper_tmp/' directory, deleted upon exit
+                unless you append '-nc', like '--aur-nc,' which doesn't delete upon exit, meaning
+                you can rebuild later.
+            </p>
+            <p>
+                Other than that, you can use the '--daur' flag. Which <b>directly</b> builds
+                software from the AUR. Remember: you need a working 'makepkg.'
+            </p>
+<code><pre>
+gelper2 --daur sharexin
+</pre></code>
+            <p>
+                This copies 'sharexin' (a software in the AUR,) builds it, then deletes the
+                temporary directory upon exit.
+            </p>
+<code><pre>
+gelper2 --daur-nc sharexin
+</pre></code>
+            <p>
+                This copes 'sharexin', builds it, but leaves the build files and the directory, meaning
+                if you run the above command again, it will check for the software, and ask you
+                if you want to rebuild it.
+            </p>
+        </section>
+
+        <section>
             <h2>Flags</h2>
             <p>
                 Gelper uses command-line arguments (commonly called 'flags'), to determine how you want
