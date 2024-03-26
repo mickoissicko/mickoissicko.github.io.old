@@ -238,6 +238,21 @@ gelper2 --daur-nc sharexin
                 if you run the above command again, it will check for the software, and ask you
                 if you want to rebuild it.
             </p>
+            <p>
+                If you have trouble with '--daur' // '--daur-nc', add '-ng' to the flag. For example:
+<code><pre>
+gelper2 --daur-ng-nc sharexin
+</pre></code>
+                This builds 'sharexin,' and leaves the temporary directory undeleted.
+<code><pre>
+gelper2 --daur-ng sharexin
+</pre></code>
+                This deletes the temporary directory upon exit.
+            </p>
+            <p>
+                The '-ng' flag truncates the '.git' from an AUR link at the end. It's added as an
+                alternative to building with '.git' from the AUR.
+            </p>
         </section>
 
         <section>
