@@ -190,7 +190,49 @@ gelper2 --q 'src/files/c/file.c' :: "Add C file -- file.c" !push
         </section>
 
         <section>
-            <h2>Cloning</h2>
+            <h2>Automatic Repository Cloning</h2>
+            <p>
+                Gelper has a feature to enable automatic cloning, as in you do not need to enter the whole
+                'githubusername/repositoryname'. Instead, you can only type in the repository name, and,
+                depending on the config, it will fill in the username for you.
+            </p>
+            <p>
+                Here's how:
+            </p>
+<code><pre>
+gelper2 --global-user GithubUsername
+</code></pre>                         
+           <p>
+                Now, whenever you type '--dc', or '--dc-ng', it will automatically use 'GithubUsername'.
+                Remember to replace 'GithubUsername' with your actual username.
+            </p>
+            <p>
+                Because mine is 'mickoissicko,' I will use 'mickoissicko'. Now, if I:
+            </p>
+<code><pre>
+gelper2 --dc githelper
+</code></pre>
+
+            <p>
+                  Let's say you want to copy an external repository <b>without</b>
+                  removing your configuration (can be done via --reset.)
+            </p>
+            <p>
+                  Here's an example:
+            </p>
+<code><pre>
+gelper2 --fc username/repository
+</code></pre>
+
+            <p>
+                  This will clone 'username/repository'. (Use the real ones.)
+                  And same goes for '--fc-ng,' which does it without the '.git' tag.
+            </p>
+
+        </section>
+
+        <section>
+            <h2>Cloning (without configuration)</h2>
             <p>
                 Gelper, quite like Git, can easily (now) in v2.1.4 do most of the things Git does.
                 Out of those, the most prominent are cloning, committing, and pushing!
@@ -355,6 +397,17 @@ alias gelper="gelper"
     the tilde, and append (instead) '/home/USERNAME', where the USERNAME <b>(case-sensitive)</b>, is
     the username of your Linux PC.</p>
 </p>
+            </p>
+        </section>
+
+        <section>
+            <h2>Cleaning</h2>
+            <p>
+                  You can delete the configuration files via the '--reset' flag.
+            </p>
+            <p>
+                  You can remove the AUR temporary folder (which is not deleted if
+                  you use the 'nc' [noclean] option) via the '--clean' flag.
             </p>
         </section>
 
