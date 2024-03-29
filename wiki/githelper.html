@@ -232,6 +232,66 @@ gelper2 --fc username/repository
         </section>
 
         <section>
+            <h2>Cloning Reserved Repositories</h2>
+            <p>
+                Github has repositories such as '.github.io' or 'usr' which are special.
+            </p>
+            <p>
+                They allow you to host your own website, or add a README to your profile.
+                However, Gelper (from 2.2.5+) now has a feature for avoiding repetition
+                and cloning these with ease!
+            </p>
+            <p>
+                And yes, you can make use of the configuration file! (To clone automatically.)
+            </p>
+            <p>
+                Associated flags:
+                <li>--cgp, --ccgp</li>
+                <li>--cga, --ccga</li>
+                <p>
+                    CGP means Clone Github Pages, CCGP means Custom-Clone Github Pages.
+                </p>
+                <p>
+                    CCGP allows you to manually specify username (if you do have a
+                    .gelper/config.txt file and you do not want to delete it).
+                </p>
+                <p>
+                    CGA means Clone Github About. CCGA, similarly, means Custom-Clone Github About.
+                    Same usage as above.
+                </p>
+            </p>
+            <p>
+                Assuming you have '--global-user' set:
+            </p>
+<code><pre>
+gelper2 --cga
+</pre></code>
+            <p>
+                And if you do not:
+            </p>
+<code><pre>
+gelper2 --cga mickoissicko
+</pre></code>
+            <p>
+                See. It makes it better: you only need to type your username!
+            </p>
+            <p>
+                CGA for about, CGP for website!
+            </p>
+            <p>
+                Here's a CCGP or CCGA demonstration:
+            </p>
+<code><pre>
+gelper2 --ccgp random_guy69
+</pre></code>
+            <p>
+                Remember: CCGP or CCGA (should) be used if you have the 'config.txt' file, or
+                '--global-user' set to a username! Otherwise, use CGA/CGP to clone manually.
+                Why type extra letters when there is no need?!
+            </p>
+        </section>
+
+        <section>
             <h2>Cloning (without configuration)</h2>
             <p>
                 Gelper, quite like Git, can easily (now) in v2.1.4 do most of the things Git does.
