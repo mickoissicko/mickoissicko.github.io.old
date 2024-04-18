@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script>
+        function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+                localStorage.setItem('reloadExecuted', 'true');
+            }
+        }
+        window.onload = forceReload;
+    </script>
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>Low-Orbit Ion Death-Ray</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../dir'">Back</button>
+
+    <section id="fsafsafsaf">
+        <h1>Low-Orbit Ion Death-Ray</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
+    </section>
+
+    <section>
+        <p>
+            A self-hosted killswitch. Uses HTTP port '80'.
+        </p>
+    </section>
+
+    <section>
+        <h1>Usage</h1>
+        <p>
+            It should automatically download everything.
+            It has a built-in installer, and installs Python
+            if you do not have it, etc.
+        </p>
+        <p>
+            If the download fails, or there is an unexpected error,
+            best you can do is install Python manually.
+        </p>
+        <p>
+            After installing Python, re-run the application.
+        </p>
+        <p>
+            It should load and you can now turn on the killswitch.
+            Access it at <a href="http://localhost:80">localhost:80</a>.
+        </p>
+        <p>
+            View the <a href="https://mick.gdn/wiki/ussr">USSR Guide</a>
+            to port-forward the killswitch port (80) in order to access
+            it outside of your network.
+        </p>
+        <p>
+            If port-forwarding from another PC, make sure to use your
+            computer's IP (e.g. 192.168.69.02 or 192.168.19.100.)
+        </p>
+    </section>
+</html>
+
