@@ -101,8 +101,9 @@
         }
 
         .highlight-heading-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             align-items: center;
             justify-content: center;
             position: absolute;
@@ -112,7 +113,7 @@
         }
     </style>
 
-    <title>software wiki</title>
+    <title>Software Wiki</title>
 </head>
 
 <body>
@@ -122,17 +123,22 @@
     <div id="container">
         <h1 class="heading">Software Wiki</h1>
         <div class="highlight-heading-container">
+            <!-- Utility -->
+            <div onclick="window.location.href='wiki/loidr'" class="highlight-heading">Low-Orbit Ion Death-Ray</div>
+            <div onclick="window.location.href='wiki/ngs'" class="highlight-heading">NgrokSenpai</div>
+            <div onclick="window.location.href='wiki/hello.sh'" class="highlight-heading">HelloShell</div>
+            <div onclick="window.location.href='wiki/ussr'" class="highlight-heading">USSR</div>
+            
+            <!-- Tools -->
+            <div onclick="window.location.href='wiki/mmgr'" class="highlight-heading">Mix Manager</div>
             <div onclick="window.location.href='wiki/githelper'" class="highlight-heading">Git Helper</div>
-
-            <div onclick="window.location.href='wiki/ussr'" class="highlight-heading">USSR Installation</div>
-
-            <div onclick="window.location.href='wiki/panik'" class="highlight-heading">Panik!</div>
-
-            <div onclick="window.location.href='wiki/ngs'" class="highlight-heading">NgrokSenpai Installation</div>
-
+            <div onclick="window.location.href='wiki/backr'" class="highlight-heading">Backer</div>
+            
+            <!-- Fun/Miscellaneous -->
+            <div onclick="window.location.href='wiki/panik'" class="highlight-heading">Panik</div>
+            
+            <!-- Automation-->
             <div onclick="window.location.href='wiki/bake'" class="highlight-heading">Bake</div>
-
-            <div onclick="window.location.href='wiki/hello.sh'" class="highlight-heading">HelloShell Installation</div>
         </div>
     </div>
 
@@ -144,3 +150,4 @@
 </body>
 
 </html>
+
