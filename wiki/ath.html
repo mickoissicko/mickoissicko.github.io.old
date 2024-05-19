@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script>
+        function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+                localStorage.setItem('reloadExecuted', 'true');
+            }
+        }
+        window.onload = forceReload;
+    </script>
+
+    <title>mick's software wiki</title>
+
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #ffcc6f;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            clip-path: circle(15px at 2px 2px);
+        }
+
+        .back-button:hover {
+            background-color: #ffa733;
+        }
+
+        h1,
+        .cool {
+            text-align: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        pre {
+            background-color: #e1dddd;
+            color: #000;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        .ok {
+            text-align: center;
+        }
+    </style>
+
+    <title>ATH Shell</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.location.href='../wiki'">Back</button>
+
+    <section id="fsafsafsaf">
+        <h1>Ascension to Heaven</h1>
+        <p class="cool">NOTE: Click the weird, feather-thingy, coloured-orange, on the top-left of the page to go back.
+        </section>
+
+        <section>
+            <p>
+                A blazingly fast, open-source and (very bad) shell.
+            </p>
+            <p>
+                Yes. The name is inspired by <a href="https://osu.ppy.sh/beatmapsets/34348/">this osu! beatmap</a>.
+            </p>
+            <p>
+                No info yet. Currently under development.
+            </p>
+        </section>
+</html>
+
