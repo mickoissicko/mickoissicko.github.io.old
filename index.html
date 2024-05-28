@@ -12,62 +12,85 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-
   <script>
-      function forceReload() {
-          if (!localStorage.getItem('reloadExecuted')) {
-              localStorage.setItem('reloadExecuted', 'true');
-          }
+    function forceReload() {
+      if (!localStorage.getItem('reloadExecuted')) {
+        localStorage.setItem('reloadExecuted', 'true');
+        location.reload();
       }
-      window.onload = forceReload;
+    }
+    window.onload = forceReload;
   </script>
-
-
   <title>mick's space</title>
   <style>
     body {
       font-family: 'Comfortaa', cursive;
-      text-align: center;
-      padding: 40px;
       background-color: #0d0d0d;
       color: #ffffff;
       margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    #container {
+    header {
+      width: 100%;
+      padding: 20px;
+      background-color: #0d0d0d;
       display: flex;
-      flex-direction: column;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow-y: auto;
     }
 
-    .nameMain {
-      font-size: 32px;
-      margin-bottom: 10px;
+    header nav a {
       color: #ffec6f;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
     }
 
-    .smallerMain {
-      color: #b3b3b3;
+    header nav a:hover {
+      color: #ffa733;
     }
 
-    .floating-button-container {
+    main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px;
+      padding: 20px;
     }
 
-    .floating-button {
+    .introduction {
+      text-align: center;
+    }
+
+    .introduction h2 {
+      color: #ffec6f;
+      font-size: 36px;
+      font-weight: normal;
+    }
+
+    .introduction p {
+      color: #b3b3b3;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: normal;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button {
       width: 200px;
       height: 60px;
       background-color: #ffec6f;
@@ -76,101 +99,63 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      margin-bottom: 10px;
+      margin: 10px;
       transition: background-color 0.3s ease;
     }
 
-    .floating-button:hover {
+    .button:hover {
       background-color: #ffa733;
     }
 
-    .floating-button a {
+    .button a {
       color: #000000;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 14px;
     }
 
-    .back-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #ffcc6f;
-      color: #0d0d0d;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border-radius: 15px;
-    }
-
-    .back-button:hover {
-      background-color: #ffa733;
-    }
-
-    .old-button {
-      position: absolute;
-      top: 70px;
-      left: 20px;
-      background-color: #ffcc6f;
-      color: #0d0d0d;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border-radius: 15px;
+    footer {
+      width: 100%;
+      padding: 10px;
+      background-color: #0d0d0d;
+      text-align: center;
+      color: #b3b3b3;
     }
   </style>
 </head>
 
-  <button class="old-button" onclick="redirectToOldPage()">
-    Old Website
-  </button>
-
 <body>
-  <div id="container">
-    <button class="back-button" onclick="redirectToSMPPage()">
-      SMP Webpage
-    </button>
-    <div class="center">
-      <p class="nameMain">Hiya~ I'm Mick >-<</p>
-      <p class="smallerMain">I like coding stuff! You can find more information down below. 
+  <header>
+    <nav>
+      <a href="https://smp.mick.gdn">SMP Webpage</a>
+      <a href="old/index_old">Old Website</a>
+    </nav>
+  </header>
+  <main>
+    <div class="introduction">
+      <h2>Hiya~ I'm Mick >-<</h2>
+      <p>I like coding stuff! You can find more information down below. 
         PS: My Github profile is more comprehensive! :3</p>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='https://github.com/mickoissicko';">
-          <a href="https://github.com/mickoissicko">GitHub Profile</a>
-        </div>
+    </div>
+    <div class="button-container">
+      <div class="button" onclick="window.location.href='https://github.com/mickoissicko';">
+        <a href="https://github.com/mickoissicko">GitHub Profile</a>
       </div>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='repolist';">
-          <a href="repolist">My Repositories</a>
-        </div>
+      <div class="button" onclick="window.location.href='repolist';">
+        <a href="repolist">My Repositories</a>
       </div>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='wiki';">
-          <a href="wiki">Software wiki</a>
-        </div>
+      <div class="button" onclick="window.location.href='wiki';">
+        <a href="wiki">Software wiki</a>
       </div>
-      <div class="floating-button-container">
-        <div class="floating-button" onclick="window.location.href='socials';">
-          <a href="socials">Socials</a>
-        </div>
-      </div>
+      <div class="button" onclick="window.location.href='socials';">
+        <a href="socials">Socials</a>
       </div>
     </div>
-  </div>
+  </main>
+  <footer>
+    &copy; 2024 Mick's Space
+  </footer>
 </body>
 
-<script>
-
-  function redirectToSMPPage() {
-    window.location.href = "https://smp.mick.gdn"
-  }
-
-  function redirectToOldPage() {
-    window.location.href = "old/index_old"
-  }
-
-</script>
-
 </html>
+
