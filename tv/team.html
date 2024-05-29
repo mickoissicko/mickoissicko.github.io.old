@@ -22,17 +22,49 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background: #1f1f1f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 2; /* Ensure header stays on top */
+        }
+        .header-title {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffcc00;
+            animation: fadeIn 2s;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background: #1f1f1f;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #ffcc00;
+            padding: 10px 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .nav-bar a:hover {
+            background: #ffcc00;
+            color: #1f1f1f;
         }
         .section {
             width: 80%;
             max-width: 800px;
             padding: 20px;
-            margin: 20px;
+            margin: 200px auto;
             background: #1f1f1f;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
-            animation: fadeInUp 1s;
         }
         .section-title {
             text-transform: uppercase;
@@ -40,15 +72,31 @@
             font-size: 1.5em;
             color: #ffcc00;
         }
-        .team-list {
-            list-style: none;
-            padding: 0;
+        .section-content {
+            line-height: 1.8;
+            margin-bottom: 10px;
         }
-        .team-list li {
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
             margin: 10px 0;
-            font-size: 1.2em;
-            padding: 5px;
-            border-bottom: 1px solid #333;
+            background: #ffcc00;
+            color: #1f1f1f;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .link-button:hover {
+            background: #ffffff;
+            color: #1f1f1f;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         @keyframes fadeInUp {
             from {
@@ -60,9 +108,29 @@
                 transform: translateY(0);
             }
         }
+        .team-list {
+            list-style: none;
+            padding: 0;
+        }
+        .team-list li {
+            margin: 10px 0;
+            font-size: 1.2em;
+            padding: 5px;
+            border-bottom: 1px solid #333;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1 class="header-title">mick's space - Links</h1>
+    </header>
+
+    <nav class="nav-bar">
+        <a href="team">Team</a>
+        <a href="links">Links</a>
+        <a href="contact">Contact</a>
+    </nav>
+
     <section class="section">
         <h2 class="section-title">Team</h2>
         <ul class="team-list">
