@@ -100,9 +100,11 @@
             filter: brightness(1.5);
         }
 
-        .highlight-heading-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .highlight-heading-container
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             gap: 20px;
             align-items: center;
             justify-content: center;
@@ -148,6 +150,5 @@
         }
     </script>
 </body>
-
 </html>
 
