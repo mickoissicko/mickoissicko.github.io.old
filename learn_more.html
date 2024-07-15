@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoplay Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        video {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <video id="myVideo" src="assets/hentai.mp4" controls></video>
+    <script>
+        window.addEventListener('load', function()
+        {
+            var video = document.getElementById('myVideo');
+            video.play().catch(function(error)
+            {
+                console.log('Autoplay failed:', error);
+            });
+        });
+    </script>
+</body>
+</html>
