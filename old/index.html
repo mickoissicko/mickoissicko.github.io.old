@@ -102,9 +102,28 @@
          font-weight: bold;
          font-size: 14px;
       }
+
+      .back-button {
+         position: absolute;
+         top: 20px;
+         left: 20px;
+         background-color: #ffffff;
+         color: #000000;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+         background-color: #ffffcc;
+      }
    </style>
 </head>
 <body>
+   <button class="back-button" onclick="window.location.href='../../'">
+      Back
+   </button>
    <div id="container">
       <div class="center">
          <p class="nameMain">Hiya! I'm Mick</p>
