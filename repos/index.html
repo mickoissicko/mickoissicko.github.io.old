@@ -93,10 +93,30 @@
       .back-button:hover {
          background-color: #ffa733;
       }
+
+      .prog-button {
+         position: absolute;
+         top: 20px;
+         left: 100px;
+         background-color: #ffcc6f;
+         color: #0d0d0d;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+      }
+
+      .prog-button:hover {
+         background-color: #ffa733;
+      }
    </style>
 </head>
 <body>
-   <button class="back-button" onclick="window.location.href='../'"">
+   <button class="prog-button" onclick="window.location.href='progress'">
+      Progress
+   </button>
+   <button class="back-button" onclick="window.location.href='../../'">
       Back
    </button>
    <div class="repolist-container">
