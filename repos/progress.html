@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+   <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+   <script>
+         function forceReload() {
+            if (!localStorage.getItem('reloadExecuted')) {
+               localStorage.setItem('reloadExecuted', 'true');
+            }
+         }
+         window.onload = forceReload;
+   </script>
+
+   <title>Repositories</title>
+   <style>
+      body {
+         overflow-y: auto;
+         font-family: 'Comfortaa', cursive;
+         text-align: center;
+         padding: 40px;
+         background-color: #0d0d0d;
+         color: #ffffff;
+         margin: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         height: 100vh;
+      }
+
+      .repolist-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+         margin-top: 60px;
+      }
+
+      .repo-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 250px;
+         height: 150px;
+         background-color: rgba(0, 0, 0, 0.4);
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+         margin: 10px;
+         padding: 20px;
+      }
+
+      .repo-box:hover {
+         background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .repo-icon {
+         font-size: 24px;
+         margin-bottom: 5px;
+      }
+
+      .repo-text {
+         font-size: 18px;
+         margin-bottom: 10px;
+      }
+
+      .github-link {
+         color: #ffffff;
+         text-decoration: none;
+      }
+
+      .back-button {
+         position: absolute;
+         top: 25px;
+         background-color: #ffcc6f;
+         color: #0d0d0d;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         border-radius: 15px;
+         align-self: flex-start;
+         margin-left: 20px;
+         z-index: 1;
+      }
+
+      .back-button:hover {
+         background-color: #ffa733;
+      }
+
+      .progress-container {
+         width: 100%;
+         background-color: #b3b3b3;
+         border-radius: 20px;
+         overflow: hidden;
+         margin-top: 10px;
+      }
+
+      .progress-bar {
+         height: 20px;
+      }
+   </style>
+</head>
+<body>
+   <button class="back-button" onclick="window.location.href='repolist'">
+      Back
+   </button>
+   <div class="repolist-container">
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/githelper';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Git Helper</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/panik';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Panik</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/ussr';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">USSR</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/killswitch';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Kill-switch</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/backr';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Backr</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 60%; background-color: #ffeb3b;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/mixmgr';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">MixMgr</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 35%; background-color: #ff9800;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/bake';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Bake</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/hello.sh';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">HelloShell</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/rainbow';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Rainbow</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 10%; background-color: #f44336;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/rainbow';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">Ascension Shell</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 10%; background-color: #f44336;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/rainbow';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">C-gethome</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/ngroksenpai';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">NGROK Senpai</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+
+      <div class="repo-box" onclick="window.location.href='https://github.com/mickoissicko/mickoissicko';">
+         <i class="fab fa-github repo-icon"></i>
+         <span class="repo-text">About me</span>
+         <div class="progress-container">
+            <div class="progress-bar" style="width: 100%; background-color: #4caf50;"></div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
+
+
