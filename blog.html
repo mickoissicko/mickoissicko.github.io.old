@@ -17,7 +17,7 @@
 
         iframe {
             width: 100%;
-            height: calc(100vh - 60px);
+            height: 100vh;
             border: none;
         }
 
@@ -26,49 +26,23 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px;
-            background: linear-gradient(90deg, #000000, #000000);
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 20px;
-            color: white;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-        }
-
-        .banner-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .banner-logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .center-text {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Arial', sans-serif;
-            font-size: 24px;
-            color: #000000;
-            font-weight: bold;
+            color: rgb(255, 255, 255);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="banner-cover">
-        <div class="banner-logo">
-            <span>Hello · Hallo · Hola · Hej · Hei · Bonjour · Salvete · Aloha · Merhaba · Xin chào · שלום · سلام · Здравствуйте · こんにちは · สวัสดี · नमस्ते · 你好 · Γειά σας · 안녕하세요</span>
-        </div>
+        <p>Hello · Hallo · Hola · Hej · Hei · Bonjour · Salvete · Aloha · Merhaba · Xin chào · שלום · سلام · Здравствуйте · こんにちは · สวัสดี · नमस्ते · 你好 · Γειά σας · 안녕하세요</p>
     </div>
-
     <iframe src="https://mickeysliterature.wordpress.com"></iframe>
 </body>
 </html>
