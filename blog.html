@@ -4,11 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mickey's Literature</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/BlogProfile.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/BlogProfile.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/BlogProfile.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/BlogProfile.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 60px);
+            border: none;
+        }
+
+        .banner-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(90deg, #000000, #000000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        .banner-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .banner-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .center-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: #000000;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <iframe 
-        src="https://mickeysliterature.wordpress.com" 
-        style="width: 100%; height: 100vh; border: none;">
-    </iframe>
+    <div class="banner-cover">
+        <div class="banner-logo">
+            <span>Hello · Hallo · Hola · Hej · Hei · Bonjour · Salvete · Aloha · Merhaba · Xin chào · שלום · سلام · Здравствуйте · こんにちは · สวัสดี · नमस्ते · 你好 · Γειά σας · 안녕하세요</span>
+        </div>
+    </div>
+
+    <iframe src="https://mickeysliterature.wordpress.com"></iframe>
 </body>
 </html>
